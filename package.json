@@ -1,0 +1,18 @@
+{
+  "name": "electron-poc",
+  "version": "1.0.0",
+  "description": "A destop application to demonstrate fundamentals of Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Charles W. McNamara",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^16.0.7"
+  },
+  "dependencies": {
+    "custom-electron-titlebar": "^4.0.1",
+    "python-shell": "^3.0.1"
+  }
+}
