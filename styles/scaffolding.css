@@ -172,4 +172,26 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+    min-width: 300px;
+    border-radius: 10px 0 0 10px
+}
+
+.send-file__wrapper, .receive-file__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.inline-end__button {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Inter,sans-serif;
+}
+
+.fs__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }

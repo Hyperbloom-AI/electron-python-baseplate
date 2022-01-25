@@ -9,6 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
         backgroundColor: customTitlebar.Color.fromHex('#ffffff')
     });*/
 
+    /*
+
     const titlebar = new customTitlebar.Titlebar({
       backgroundColor: customTitlebar.Color.fromHex("#eee"),
       onMinimize: () => ipcRenderer.send('window-minimize'),
@@ -20,6 +22,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ipcRenderer.send('request-application-menu');  // Add this for request menu
 
+    */
+
     const replaceText = (selector, text) => {
         const element = document.getElementById(selector)
         if (element) element.innerText = text
@@ -29,9 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
+/*
+
 ipcRenderer.on('titlebar-menu', (event, menu) => {
   titlebar.updateMenu(menu)  // Add this for update menu
 })
+
+*/
 
 contextBridge.exposeInMainWorld('electron', {
   startDrag: (fileName) => {

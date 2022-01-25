@@ -12,14 +12,25 @@
   <body data-theme="device">
     <br/>
 
-    <h1>Simple Python Calculator!</h1>
-    <p>Input something like <code>1 + 1</code>.</p>
-    <label class="custom-file-upload">
-        <input type="file" id="input"/>
-        <span id="inputText">Click to Select File</span>
-    </label>
-    <br/>
-    <input id="submitButton" type="button" value="Submit"></input>
+    <h1>SOPHAS File Modifier to GDB</h1>
+    <p>Input SOPHAS Output below</p>
+    <div class="fs__wrapper">
+        <div class="send-file__wrapper">
+            <label class="custom-file-upload">
+                <input type="file" id="input"/>
+                <span id="inputText">Click to Select File</span>
+            </label>
+            <button id="submitButton" class="inline-end__button">Submit</button>
+        </div>
+
+        <div class="receive-file__wrapper">
+            <label class="custom-file-upload">
+                <input type="file" id="input"/>
+                <span id="inputText">Click to Select File</span>
+            </label>
+            <button id="submitButton" class="inline-end__button">Submit</button>
+        </div>
+    </div>
     </br>
     Got <span id="result"></span>
 

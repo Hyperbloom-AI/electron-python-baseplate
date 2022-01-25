@@ -56,7 +56,7 @@ const createWindow = () => {
         },
     })
 
-    ipcMain.on('window-minimize', function (event) {
+    /*ipcMain.on('window-minimize', function (event) {
       BrowserWindow.fromWebContents(event.sender).minimize();
     })
     
@@ -72,6 +72,7 @@ const createWindow = () => {
     ipcMain.on('window-is-maximized', function (event) {
       event.returnValue = BrowserWindow.fromWebContents(event.sender).isMaximized()
     })
+    */
 
     ipcMain.handle('dark-mode:toggle', () => {
         nativeTheme.themeSource = 'dark'
@@ -117,6 +118,8 @@ const createWindow = () => {
         });*/
     })
 
+
+    /*
     ipcMain.on('request-application-menu', function (event) {
       const menu = Menu.getApplicationMenu();
       const jsonMenu = JSON.parse(JSON.stringify(menu, parseMenu()));
@@ -156,6 +159,8 @@ const createWindow = () => {
       return menuItem;
     };
 
+    */
+
     win.loadFile('index.html')
 }
 
@@ -175,8 +180,10 @@ https.get('https://img.icons8.com/ios/452/drag-and-drop.png', (response) => {
 */
 app.whenReady().then(() => {
 
+    /*
     const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
+    */
 
     createWindow()
   
