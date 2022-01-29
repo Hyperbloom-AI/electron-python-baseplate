@@ -9,14 +9,14 @@ window.addEventListener('DOMContentLoaded', () => {
         backgroundColor: customTitlebar.Color.fromHex('#ffffff')
     });*/
 
-    const titlebar = new customTitlebar.Titlebar({
+    /*const titlebar = new customTitlebar.Titlebar({
       backgroundColor: customTitlebar.Color.fromHex("#eee"),
       onMinimize: () => ipcRenderer.send('window-minimize'),
       onMaximize: () => ipcRenderer.send('window-maximize'),
       onClose: () => ipcRenderer.send('window-close'),
       isMaximized: () => ipcRenderer.sendSync('window-is-maximized'),
       onMenuItemClick: (commandId) => ipcRenderer.send('menu-event', commandId)  // Add this for click action
-    });
+    });*/
 
     ipcRenderer.send('request-application-menu');  // Add this for request menu
 

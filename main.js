@@ -117,6 +117,8 @@ const createWindow = () => {
         });*/
     })
 
+
+    /*
     ipcMain.on('request-application-menu', function (event) {
       const menu = Menu.getApplicationMenu();
       const jsonMenu = JSON.parse(JSON.stringify(menu, parseMenu()));
@@ -128,6 +130,8 @@ const createWindow = () => {
       const item = getMenuItemByCommandId(commandId, menu);
       item?.click(undefined, BrowserWindow.fromWebContents(event.sender), event.sender);
     });
+
+    */
     
     // Parse menu to send it to the title bar
     const parseMenu = () => {
@@ -143,6 +147,7 @@ const createWindow = () => {
     }
     
     // Gets the menu item on click
+    /*
     const getMenuItemByCommandId = (commandId, menu = Menu.getApplicationMenu()) => {
       let menuItem;
       menu.items.forEach(item => {
@@ -155,6 +160,8 @@ const createWindow = () => {
     
       return menuItem;
     };
+
+    */
 
     win.loadFile('index.html')
 }
@@ -175,8 +182,9 @@ https.get('https://img.icons8.com/ios/452/drag-and-drop.png', (response) => {
 */
 app.whenReady().then(() => {
 
-    const menu = Menu.buildFromTemplate(template)
+    /*const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
+    */
 
     createWindow()
   

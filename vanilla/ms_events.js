@@ -60,3 +60,4 @@ const sendToPython = async(input) => {
 submitButton.addEventListener('click', () => {
     sendToPython(fileInput.value);
 });
+
