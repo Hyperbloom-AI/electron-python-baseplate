@@ -78,7 +78,7 @@ const createWindow = () => {
       };
     
       const result = await new Promise((resolve, reject) => {
-        PythonShell.run('./py/calc.py', options, async (err, results) => {
+        PythonShell.run('./py/translator.py', options, async (err, results) => {
           if (err) {
             reject(err);
           }

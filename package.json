@@ -4,7 +4,8 @@
   "description": "A destop application to demonstrate fundamentals of Electron",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev": "electron ."
   },
   "author": "Charles W. McNamara",
   "license": "ISC",
