@@ -56,23 +56,6 @@ const createWindow = () => {
         },
     })
 
-    ipcMain.on('window-minimize', function (event) {
-      BrowserWindow.fromWebContents(event.sender).minimize();
-    })
-    
-    ipcMain.on('window-maximize', function (event) {
-      const window = BrowserWindow.fromWebContents(event.sender);
-      window.isMaximized() ? window.unmaximize() : window.maximize();
-    })
-    
-    ipcMain.on('window-close', function (event) {
-      BrowserWindow.fromWebContents(event.sender).close()
-    })
-    
-    ipcMain.on('window-is-maximized', function (event) {
-      event.returnValue = BrowserWindow.fromWebContents(event.sender).isMaximized()
-    })
-
     ipcMain.handle('dark-mode:toggle', () => {
         nativeTheme.themeSource = 'dark'
         return nativeTheme.shouldUseDarkColors
@@ -88,84 +71,31 @@ const createWindow = () => {
         return nativeTheme.shouldUseDarkColors
     })
 
-    ipcMain.handle('send-calculation:python', (input) => {
-
-            let options = {
-            mode: 'text',
-            args: [input]
-          };
-
-          PythonShell.run('./py/calc.py', options, function (err, results) {
-            if (err) throw err;
-            // results is an array consisting of messages collected during execution
-            console.log('results: ', results);
-            var result = results[0];
-            console.log(result)
-          });
-
-        /*var python = require('child_process').spawn('python', ['./py/calc.py', input]);
-        python.stdout.on('data', function (data) {
-            console.log("Python response: ", data.toString('utf8'));
-        });
-    
-        python.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
-        });
-    
-        python.on('close', (code) => {
-        console.log(`child process exited with code ${code}`);
-        });*/
-    })
-
-
-    /*
-    ipcMain.on('request-application-menu', function (event) {
-      const menu = Menu.getApplicationMenu();
-      const jsonMenu = JSON.parse(JSON.stringify(menu, parseMenu()));
-      event.sender.send('titlebar-menu', jsonMenu);
-    });
-    
-    ipcMain.on('menu-event', (event, commandId) => {
-      const menu = Menu.getApplicationMenu();
-      const item = getMenuItemByCommandId(commandId, menu);
-      item?.click(undefined, BrowserWindow.fromWebContents(event.sender), event.sender);
-    });
-
-    */
-    
-    // Parse menu to send it to the title bar
-    const parseMenu = () => {
-      const menu = new WeakSet();
-      return (key, value) => {
-        if (key === 'commandsMap') return;
-        if (typeof value === 'object' && value !== null) {
-          if (menu.has(value)) return;
-          menu.add(value);
-        }
-        return value;
+    ipcMain.handle('send-calculation:python', async (event, fileInput) => {
+      let options = {
+        mode: 'text',
+        args: [fileInput]
       };
-    }
     
-    // Gets the menu item on click
-    /*
-    const getMenuItemByCommandId = (commandId, menu = Menu.getApplicationMenu()) => {
-      let menuItem;
-      menu.items.forEach(item => {
-        if (item.submenu) {
-          const submenuItem = getMenuItemByCommandId(commandId, item.submenu);
-          if (submenuItem) menuItem = submenuItem;
-        }
-        if (item.commandId === commandId) menuItem = item;
-      });
+      const result = await new Promise((resolve, reject) => {
+        PythonShell.run('./py/translator.py', options, async (err, results) => {
+          if (err) {
+            reject(err);
+          }
+          resolve(results[0])
+        })
+      })
     
-      return menuItem;
-    };
-
-    */
+      return result;
+    
+    })
 
     win.loadFile('index.html')
 }
 
+async function savePath(r) {
+  return r
+}
 const iconName = path.join(__dirname, 'iconForDragAndDrop.png');
 const icon = fs.createWriteStream(iconName);
 
@@ -182,7 +112,8 @@ https.get('https://img.icons8.com/ios/452/drag-and-drop.png', (response) => {
 */
 app.whenReady().then(() => {
 
-    /*const menu = Menu.buildFromTemplate(template)
+    /*
+    const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
     */
 

@@ -172,4 +172,45 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
+    min-width: 300px;
+    border-radius: 6px 0 0 6px
+}
+
+.send-file__wrapper, .receive-file__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.send-file__wrapper {
+    margin-top: 30px;
+}
+
+.draggable-file {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    min-width: 371.5px;
+    border-radius: 6px}
+
+.inline-end__button {
+    border: none;
+    border-radius: 0 6px 6px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: Inter,sans-serif;
+}
+
+.fs__wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.fs__wrapper > * {
+    margin-bottom: 25px
+}
+
+.versions {
+    display: none;
 }

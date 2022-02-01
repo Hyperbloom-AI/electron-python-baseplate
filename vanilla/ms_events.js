@@ -40,7 +40,6 @@ function closeSettings(e) {
 
 function updateFileName() {
     if(fileInput.value.length > 1) {
-        console.log(fileInput.value)
         fileName.innerHTML = fileInput.value
         currentFile = fileInput.value
     }
@@ -54,10 +53,17 @@ function clearFile() {
 
 const sendToPython = async(input) => {
     var result = await window.python.sendCalculation(input)
-    console.log(result)
-  }
+    return result
+}
     
-submitButton.addEventListener('click', () => {
-    sendToPython(fileInput.value);
-});
+submitButton.addEventListener('click', async() => {
+    var filePath = fileInput.files[0].path
+    const newFile = await sendToPython(filePath);
 
+    document.getElementById('drag').ondragstart = (event) => {
+        event.preventDefault()
+        window.electron.startDrag(newFile)
+    }
+
+    document.getElementById('drag').innerHTML = newFile
+});

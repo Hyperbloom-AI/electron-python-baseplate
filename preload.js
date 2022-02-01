@@ -9,7 +9,9 @@ window.addEventListener('DOMContentLoaded', () => {
         backgroundColor: customTitlebar.Color.fromHex('#ffffff')
     });*/
 
-    /*const titlebar = new customTitlebar.Titlebar({
+    /*
+
+    const titlebar = new customTitlebar.Titlebar({
       backgroundColor: customTitlebar.Color.fromHex("#eee"),
       onMinimize: () => ipcRenderer.send('window-minimize'),
       onMaximize: () => ipcRenderer.send('window-maximize'),
@@ -17,8 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
       isMaximized: () => ipcRenderer.sendSync('window-is-maximized'),
       onMenuItemClick: (commandId) => ipcRenderer.send('menu-event', commandId)  // Add this for click action
     });*/
-
-    ipcRenderer.send('request-application-menu');  // Add this for request menu
 
     const replaceText = (selector, text) => {
         const element = document.getElementById(selector)
@@ -29,18 +29,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-ipcRenderer.on('titlebar-menu', (event, menu) => {
-  titlebar.updateMenu(menu)  // Add this for update menu
-})
-
 contextBridge.exposeInMainWorld('electron', {
-  startDrag: (fileName) => {
-    ipcRenderer.send('ondragstart', path.join(process.cwd(), fileName))
-  }
+  startDrag: (fileName) => ipcRenderer.send('ondragstart', path.join(process.cwd(), fileName))
 })
-
-// All of the Node.js APIs are available in the preload process.
-// It has the same sandbox as a Chrome extension.
 
 contextBridge.exposeInMainWorld('darkMode', {
     toggleDarkMode: () => ipcRenderer.invoke('dark-mode:toggle'),
@@ -48,9 +39,8 @@ contextBridge.exposeInMainWorld('darkMode', {
     system: () => ipcRenderer.invoke('dark-mode:system')
 })
 
-/*send-calculation:python
-dark-mode:system*/
-
 contextBridge.exposeInMainWorld('python', {
-    sendCalculation: () => ipcRenderer.invoke('send-calculation:python'),
+  sendCalculation: async (fileInput) => {
+    return await ipcRenderer.invoke('send-calculation:python', fileInput)
+  }
 })
