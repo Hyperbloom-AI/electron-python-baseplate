@@ -9,43 +9,6 @@ const https = require('https')
     Creates a new window that will load index.html
 */
 
-const template = [
-  {
-    label: 'File',
-    submenu: [
-      {
-        label: 'New window',
-        accelerator: 'Ctrl+N'
-      },
-      {
-        label: 'Exit',
-        accelerator: 'Alt+F4',
-        role: 'quit'
-      }
-    ]
-  },
-  {
-    label: 'Help',
-    submenu: [
-      {
-        label: 'Help',
-        accelerator: 'F1',
-        click: async () => {
-          const { shell } = require('electron')
-          await shell.openExternal('https://electronjs.org')
-        }
-      },
-      {
-        label: 'About us',
-        click: async () => {
-          const { shell } = require('electron')
-          await shell.openExternal('https://electronjs.org')
-        }
-      }
-    ]
-  }
-]
-
 const createWindow = () => {
     const win = new BrowserWindow({
         width: 800,
