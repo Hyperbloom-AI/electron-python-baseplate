@@ -53,10 +53,15 @@ function clearFile() {
 }
 
 const sendToPython = async(input) => {
+    console.log(input)
+
     var result = await window.python.sendCalculation(input)
-    console.log(result)
   }
     
 submitButton.addEventListener('click', () => {
-    sendToPython(fileInput.value);
+    var filePath = fileInput.files[0].path
+
+    console.log(typeof(filePath))
+
+    sendToPython(filePath);
 });

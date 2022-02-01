@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^4.0.1",
-    "python-shell": "^3.0.1"
+    "python-shell": "^3.0.1",
+    "stream-to-blob": "^2.0.1"
   }
 }

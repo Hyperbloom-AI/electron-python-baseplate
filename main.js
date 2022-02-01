@@ -3,6 +3,7 @@ var { PythonShell } = require('python-shell');
 const path = require('path')
 const fs = require('fs')
 const https = require('https')
+const streamToBlob = require('stream-to-blob')
 
 
 /*
@@ -91,31 +92,19 @@ const createWindow = () => {
 
     ipcMain.handle('send-calculation:python', (input) => {
 
-            let options = {
-            mode: 'text',
+          let options = {
+            mode: 'json',
             args: [input]
           };
 
           PythonShell.run('./py/calc.py', options, function (err, results) {
+
             if (err) throw err;
             // results is an array consisting of messages collected during execution
             console.log('results: ', results);
             var result = results[0];
             console.log(result)
           });
-
-        /*var python = require('child_process').spawn('python', ['./py/calc.py', input]);
-        python.stdout.on('data', function (data) {
-            console.log("Python response: ", data.toString('utf8'));
-        });
-    
-        python.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
-        });
-    
-        python.on('close', (code) => {
-        console.log(`child process exited with code ${code}`);
-        });*/
     })
 
 
