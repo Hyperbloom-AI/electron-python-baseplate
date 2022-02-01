@@ -33,22 +33,9 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-/*
-
-ipcRenderer.on('titlebar-menu', (event, menu) => {
-  titlebar.updateMenu(menu)  // Add this for update menu
-})
-
-*/
-
 contextBridge.exposeInMainWorld('electron', {
-  startDrag: (fileName) => {
-    ipcRenderer.send('ondragstart', path.join(process.cwd(), fileName))
-  }
+  startDrag: (fileName) => ipcRenderer.send('ondragstart', path.join(process.cwd(), fileName))
 })
-
-// All of the Node.js APIs are available in the preload process.
-// It has the same sandbox as a Chrome extension.
 
 contextBridge.exposeInMainWorld('darkMode', {
     toggleDarkMode: () => ipcRenderer.invoke('dark-mode:toggle'),
@@ -56,9 +43,8 @@ contextBridge.exposeInMainWorld('darkMode', {
     system: () => ipcRenderer.invoke('dark-mode:system')
 })
 
-/*send-calculation:python
-dark-mode:system*/
-
 contextBridge.exposeInMainWorld('python', {
-    sendCalculation: () => ipcRenderer.invoke('send-calculation:python'),
+  sendCalculation: async (fileInput) => {
+    return await ipcRenderer.invoke('send-calculation:python', fileInput)
+  }
 })

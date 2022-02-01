@@ -17,9 +17,3 @@ document.getElementById('themeLight').addEventListener('click', async () => {
     document.getElementById('themeLight').classList.add('more-menu__link--active')
     document.getElementById('themeDark').classList.remove('more-menu__link--active')
 })
-
-
-document.getElementById('drag').ondragstart = (event) => {
-    event.preventDefault()
-    window.electron.startDrag('drag-and-drop.md')
-}
