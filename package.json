@@ -13,7 +13,6 @@
     "electron": "^16.0.7"
   },
   "dependencies": {
-    "custom-electron-titlebar": "^4.0.1",
     "python-shell": "^3.0.1"
   }
 }
