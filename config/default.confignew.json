@@ -1,0 +1,333 @@
+{
+    "NAME": "default",
+    "DATE_CREATED": "2/2/2022",
+    "FUNCTIONS": [
+        {
+            "columnName": "custom_field_ss_num",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ss_num",
+                    "new": "SS_NUM"
+                }
+            ]
+        },
+        {
+            "columnName": "date_of_birth",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "date_of_birth",
+                    "new": "BIRTH_DATE"
+                }
+            ]
+        },
+        {
+            "columnName": "last_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "last_name",
+                    "new": "NAME_LAST"
+                }
+            ]
+        },
+        {
+            "columnName": "first_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "first_name",
+                    "new": "NAME_FIRST"
+                }
+            ]
+        },
+        {
+            "columnName": "middle_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "middle_name",
+                    "new": "NAME_MIDDLE"
+                }
+            ]
+        },
+        {
+            "columnName": "suffix",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "suffix",
+                    "new": "NAME_SUFFIX"
+                }
+            ]
+        },
+        {
+            "columnName": "preferred_first_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "preferred_first_name",
+                    "new": "NAME_PREFERRED"
+                }
+            ]
+        },
+        {
+            "columnName": "alt_last_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "alt_last_name",
+                    "new": "NAME_ALIAS"
+                }
+            ]
+        },
+        {
+            "columnName": "gender",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Male",
+                            "new": "M"
+                        },
+                        {
+                            "original": "Female",
+                            "new": "F"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "gender",
+                    "new": "GENDER"
+                }
+            ]
+        },
+        {
+            "columnName": "email",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "email",
+                    "new": "EMAIL"
+                }
+            ]
+        },
+        {
+            "columnName": "current_street_address",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_street_address",
+                    "new": "MAIL_STREET"
+                }
+            ]
+        },
+        {
+            "columnName": "current_street_address_2",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_street_address_2",
+                    "new": "MAIL_STREET2"
+                }
+            ]
+        },
+        {
+            "columnName": "current_city",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_city",
+                    "new": "MAIL_CITY"
+                }
+            ]
+        },
+        {
+            "columnName": "current_state_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "current_state_code",
+                    "new": "MAIL_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_special_option",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ugagrad_special_option",
+                    "new": "MAIL_PROVINCE"
+                }
+            ]
+        },
+        {
+            "columnName": "current_postal_code",
+            "transformations": [
+                {
+                    "type": "convertToZip"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "current_postal_code",
+                    "new": "MAIL_ZIP"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_work_begin_4",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_work_begin_4",
+                    "new": "MAIL_POSTAL"
+                }
+            ]
+        },
+        {
+            "columnName": "current_country",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_country",
+                    "new": "MAIL_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_street_address",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_street_address",
+                    "new": "PERM_STREET"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_street_address_2",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_street_address_2",
+                    "new": "PERM_STREET2"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_city",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_city",
+                    "new": "PERM_CITY"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_state_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "permanent_state_code",
+                    "new": "PERM_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "Perm_Providence",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "Perm_Providence",
+                    "new": "PERM_PROVINCE"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_postal_code",
+            "transformations": [
+                {
+                    "type": "convertToZip"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "permanent_postal_code",
+                    "new": "PERM_ZIP"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_work_phone",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_work_phone",
+                    "new": "PERM_POSTAL"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_country",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_country",
+                    "new": "PERM_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "race_hispanic",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "",
+                            "new": "N"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_hispanic",
+                    "new": "HISPANIC_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "race_white",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "W"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_white",
+                    "new": "RACE_WHITE"
+                }
+            ]
+        }
+    ],
+    "OUTPUT_FILE_NAME_FORMAT": "Public_Health_{year+%m+%d+%H+%M+%S}.csv",
+    "KEY": "20220202163959"
+}

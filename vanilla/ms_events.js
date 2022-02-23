@@ -52,7 +52,14 @@ function clearFile() {
 }
 
 const sendToPython = async(input) => {
-    var result = await window.python.sendCalculation(input)
+
+    /* 
+        JSON File loading here is temporary
+    */
+
+    const config = 'C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\config\\default.config.json'
+
+    var result = await window.python.sendCalculation(input, config)
     return result
 }
     

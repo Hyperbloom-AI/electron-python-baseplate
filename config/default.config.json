@@ -1,0 +1,626 @@
+{
+    "NAME": "default",
+    "DATE_CREATED": "2/2/2022",
+    "FUNCTIONS": [
+        {
+            "columnName": "custom_field_ss_num",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ss_num",
+                    "new": "SS_NUM"
+                }
+            ]
+        },
+        {
+            "columnName": "date_of_birth",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "date_of_birth",
+                    "new": "BIRTH_DATE"
+                }
+            ]
+        },
+        {
+            "columnName": "last_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "last_name",
+                    "new": "NAME_LAST"
+                }
+            ]
+        },
+        {
+            "columnName": "first_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "first_name",
+                    "new": "NAME_FIRST"
+                }
+            ]
+        },
+        {
+            "columnName": "middle_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "middle_name",
+                    "new": "NAME_MIDDLE"
+                }
+            ]
+        },
+        {
+            "columnName": "suffix",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "suffix",
+                    "new": "NAME_SUFFIX"
+                }
+            ]
+        },
+        {
+            "columnName": "preferred_first_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "preferred_first_name",
+                    "new": "NAME_PREFERRED"
+                }
+            ]
+        },
+        {
+            "columnName": "alt_last_name",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "alt_last_name",
+                    "new": "NAME_ALIAS"
+                }
+            ]
+        },
+        {
+            "columnName": "gender",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Male",
+                            "new": "M"
+                        },
+                        {
+                            "original": "Female",
+                            "new": "F"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "gender",
+                    "new": "GENDER"
+                }
+            ]
+        },
+        {
+            "columnName": "email",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "email",
+                    "new": "EMAIL"
+                }
+            ]
+        },
+        {
+            "columnName": "current_street_address",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_street_address",
+                    "new": "MAIL_STREET"
+                }
+            ]
+        },
+        {
+            "columnName": "current_street_address_2",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_street_address_2",
+                    "new": "MAIL_STREET2"
+                }
+            ]
+        },
+        {
+            "columnName": "current_city",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_city",
+                    "new": "MAIL_CITY"
+                }
+            ]
+        },
+        {
+            "columnName": "current_state_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "current_state_code",
+                    "new": "MAIL_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_special_option",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ugagrad_special_option",
+                    "new": "MAIL_PROVINCE"
+                }
+            ]
+        },
+        {
+            "columnName": "current_postal_code",
+            "transformations": [
+                {
+                    "type": "convertToZip"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "current_postal_code",
+                    "new": "MAIL_ZIP"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_work_begin_4",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_work_begin_4",
+                    "new": "MAIL_POSTAL"
+                }
+            ]
+        },
+        {
+            "columnName": "current_country",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "current_country",
+                    "new": "MAIL_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_street_address",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_street_address",
+                    "new": "PERM_STREET"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_street_address_2",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_street_address_2",
+                    "new": "PERM_STREET2"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_city",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_city",
+                    "new": "PERM_CITY"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_state_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "permanent_state_code",
+                    "new": "PERM_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "Perm_Providence",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "Perm_Providence",
+                    "new": "PERM_PROVINCE"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_postal_code",
+            "transformations": [
+                {
+                    "type": "convertToZip"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "permanent_postal_code",
+                    "new": "PERM_ZIP"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_work_phone",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_work_phone",
+                    "new": "PERM_POSTAL"
+                }
+            ]
+        },
+        {
+            "columnName": "permanent_country",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "permanent_country",
+                    "new": "PERM_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "race_hispanic",
+            "transformations": [
+                {
+                    "type": "replaceEmpty",
+                    "replacement": "N"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_hispanic",
+                    "new": "HISPANIC_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "race_white",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "W"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_white",
+                    "new": "RACE_WHITE"
+                }
+            ]
+        },
+        {
+            "columnName": "race_black",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "B"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_black",
+                    "new": "RACE_BLACK"
+                }
+            ]
+        },
+        {
+            "columnName": "race_asian",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "Z"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_asian",
+                    "new": "RACE_ASIAN"
+                }
+            ]
+        },
+        {
+            "columnName": "race_asian_indian",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "I"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_asian_indian",
+                    "new": "RACE_INDIAN"
+                }
+            ]
+        },
+        {
+            "columnName": "race_hawaiian",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Y",
+                            "new": "P"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "race_hawaiian",
+                    "new": "RACE_HAWAIIAN"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_8777381953800759512_are_you_or_will_you_be_at_time_of_enrollment_a_current_or_former_member_of_the_us_military",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_8777381953800759512_are_you_or_will_you_be_at_time_of_enrollment_a_current_or_former_member_of_the_us_military",
+                    "new": "MILITARY_EXPERIENCE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_8966288556260434901_what_branch_or_component",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_8966288556260434901_what_branch_or_component",
+                    "new": "MILITARY_BRANCH_COMPONENT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_8711108970603192069_are_you_the_spouse_or_dependent_of_a_us_military_service_member_or_veteran",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_8711108970603192069_are_you_the_spouse_or_dependent_of_a_us_military_service_member_or_veteran",
+                    "new": "MILITARY_EXPERIENCE_DEP"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_788149636291138971_what_branch_or_component",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_788149636291138971_what_branch_or_component",
+                    "new": "MILITARY_BRANCH_COMPONENT_DEP"
+                }
+            ]
+        },
+        {
+            "columnName": "city_of_birth",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "city_of_birth",
+                    "new": "BIRTH_CITY"
+                }
+            ]
+        },
+        {
+            "columnName": "state_of_birth_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "state_of_birth_code",
+                    "new": "BIRTH_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "country_of_birth",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "country_of_birth",
+                    "new": "BIRTH_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_georgia_res",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ugagrad_georgia_res",
+                    "new": "EMPTY1"
+                }
+            ]
+        },
+        {
+            "columnName": "preferred_phone",
+            "transformations": [
+                {
+                    "type": "formatPhoneNumber"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "preferred_phone",
+                    "new": "PHONE_PRIMARY"
+                }
+            ]
+        },
+        {
+            "columnName": "alternate_phone",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "alternate_phone",
+                    "new": "PHONE_TEXT"
+                }
+            ]
+        },
+        {
+            "columnName": "citizenship",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "citizenship",
+                    "new": "CITIZEN_NATION"
+                }
+            ]
+        },
+        {
+            "columnName": "citizenship_status",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "U.S. Citizen",
+                            "new": "C"
+                        },
+                        {
+                            "original": "Non Resident",
+                            "new": "A"
+                        },
+                        {
+                            "original": "Permanent Resident",
+                            "new": "R"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "citizenship_status",
+                    "new": "CITIZEN_CODE"
+                }
+            ]
+        },
+        {
+            "columnName": "state_of_residence_code",
+            "transformations": [
+                {
+                    "type": "removeIfNotInList",
+                    "list": "US States"
+                },
+                {
+                    "type": "removeValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "current_county",
+                    "replaceNot": "GA"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "state_of_residence_code",
+                    "new": "RESIDENCE_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_366466470399805345_are_you_applying_for_in-state_tuition",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_366466470399805345_are_you_applying_for_in-state_tuition",
+                    "new": "GEORGIA_RESIDENT"
+                }
+            ]
+        },
+        {
+            "columnName": "current_county",
+            "transformations": [
+                {
+                    "type": "replaceWithValueInList",
+                    "list": "Georgia Counties"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "current_county",
+                    "new": "GEORGIA_COUNTY"
+                }
+            ]
+        }
+    ],
+    "OUTPUT_FILE_NAME_FORMAT": {
+        "formatting_parts": [
+            {
+                "value": "Public_Health_",
+                "type": "string"
+            },
+            {
+                "value": "year",
+                "type": "time_year"
+            },
+            {
+                "value": "%m",
+                "type": "time_strftime"
+            },
+            {
+                "value": "%d",
+                "type": "time_strftime"
+            },
+            {
+                "value": "%H",
+                "type": "time_strftime"
+            },
+            {
+                "value": "%M",
+                "type": "time_strftime"
+            },
+            {
+                "value": "%S",
+                "type": "time_strftime"
+            },
+            {
+                "value": ".csv",
+                "type": "string"
+            }
+        ]
+    },
+    "KEY": "20220202163959"
+}

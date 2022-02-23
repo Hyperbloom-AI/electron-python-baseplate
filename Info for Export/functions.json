@@ -1,0 +1,47 @@
+{
+    "functions": [
+        {
+            "name": "getFirstCharacter",
+            "method": "string[0]"
+        },
+        {
+            "name": "capitalizeString",
+            "method": "string.capitalize()"
+        },
+        {
+            "name": "checkForItemInList",
+            "method": "if (<item> in <list>)",
+            "appliesToLists": ["stateCodes", "countyCode"]
+        },
+        {
+            "name": "zipCodeModifier",
+            "purpose": "Remove -xxxx adress additions and delete international address codes",
+            "method": "Muliple Methods"
+        },
+        {
+            "name": "changeValue",
+            "method": "string.replace()",
+            "notes": "In order to allow string matching we should lowercase both sides before matching but apply the users chosen case for the replacement. This type of parameter should also be able to change the value when something is not a certain value"
+        },
+        {
+            "name": "changeLinkedColumnValue",
+            "method": "string.replace()",
+            "notes": "Similar to previous, this adjustment uses the data in onw column to change data in another column"
+        },
+        {
+            "name": "addLeadingZeros",
+            "method": "num.toString() then add zeros to beginning"
+        },
+        {
+            "name": "convertDateStringtoMonthYear",
+            "method": "string.split()",
+            "specialEffects": "This translation will create multiple columns",
+            "note": "UNSURE \n Need more details on whether this is what the client wants"
+        },
+        {
+            "name": "insertValuesforAllRows",
+            "method": "pd.col.insert",
+            "note": "This will insert the same value in every row for a column"
+        }
+    ]
+}

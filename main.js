@@ -34,10 +34,10 @@ const createWindow = () => {
         return nativeTheme.shouldUseDarkColors
     })
 
-    ipcMain.handle('send-calculation:python', async (event, fileInput) => {
+    ipcMain.handle('send-calculation:python', async (event, fileInput, config) => {
       let options = {
         mode: 'text',
-        args: [fileInput]
+        args: [fileInput, config]
       };
     
       const result = await new Promise((resolve, reject) => {
