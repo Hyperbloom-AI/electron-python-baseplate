@@ -552,7 +552,8 @@
                 {
                     "type": "removeValuesInSeparateColumnBasedOnThisColumn",
                     "separateColumnName": "current_county",
-                    "replaceNot": "GA"
+                    "replace": "GA",
+                    "replaceType": "not"
                 },
                 {
                     "type": "changeColName",
@@ -729,12 +730,57 @@
             "columnName": "custom_questions_252383216642704910_during_the_past_12_months_have_you_attended_an_educational_institution_outside_of_georgia",
             "transformations": [
                 {
+                    "type": "removeValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "custom_questions_4150296308230486407_does_the_institution_assess_out-of-state_tuition_for_you",
+                    "replace": "N",
+                    "replaceType": "default"
+                },
+                {
+                    "type": "removeValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "custom_questions_4150296308230486407_does_the_institution_assess_out-of-state_tuition_for_you",
+                    "replace": "N",
+                    "replaceType": "defaultNull"
+                },
+                {
                     "type": "changeColName",
                     "original": "custom_questions_252383216642704910_during_the_past_12_months_have_you_attended_an_educational_institution_outside_of_georgia",
                     "new": "GAREZ_OOS_SCHOOL"
                 }
             ]
+        },
+        {
+            "columnName": "custom_questions_4150296308230486407_does_the_institution_assess_out-of-state_tuition_for_you",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_4150296308230486407_does_the_institution_assess_out-of-state_tuition_for_you",
+                    "new": "GAREZ_OOS_TUITION"
+                }
+            ]
+        },
+        {
+            "columnName": "fice_code_0",
+            "transformations": [
+                {
+                    "type": "groupColumns",
+                    "columnList": [
+                        "fice_code_0",
+                        "college_name_0",
+                        "college_attended_from_0",
+                        "college_attended_to_0",
+                        "college_first_degree_primary_major_0",
+                        "college_first_degree_code_0",
+                        "college_first_degree_date_0"
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "fice_code_0",
+                    "new": "COLLEGE_FICE.1"
+                }
+            ]
         }
+
     ],
     "OUTPUT_FILE_NAME_FORMAT": {
         "formatting_parts": [

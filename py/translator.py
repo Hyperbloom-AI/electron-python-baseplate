@@ -43,10 +43,13 @@ def translate(path, config):
                 format_phone(df, function["columnName"])
 
             elif(transformation["type"] == "removeValuesInSeparateColumnBasedOnThisColumn"):
-                remove_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replaceNot"])
+                remove_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replace"], transformation["replaceType"])
 
             elif(transformation["type"] == "replaceWithValueInList"):
                 replace_with_listval(df, function["columnName"], ga_counties_list)
+            
+            elif(transformation["type"] == "groupColumns"):
+                df = reorder_columns(df, transformation["columnList"])
             else:
                 print("Hit default!")
     try:
@@ -101,8 +104,14 @@ def convert_to_formatted_phone(x):
     strx = str(x)
     return float(strx[(len(str(x))-12):(len(str(x))-1)])
 
-def remove_values_in_other_column_based_on_initial(frame, column_name, column_name_to_change, value):
-    frame.loc[frame[column_name] != value, column_name_to_change] = ""
+def remove_values_in_other_column_based_on_initial(frame, column_name, column_name_to_change, value, replace_type):
+    if replace_type == "not":
+        frame.loc[frame[column_name] != value, column_name_to_change] = ""
+    elif replace_type == "defaultNull":
+        frame.loc[frame[column_name].isnull(), column_name_to_change] = ""
+        frame.loc[frame[column_name] == "", column_name_to_change] = ""
+    else:
+        frame.loc[frame[column_name] == value, column_name_to_change] = ""
 
 def replace_with_listval(frame, column_name, arr):
     frame[column_name] = frame[column_name].apply(replacement_lists, args=([arr]))
@@ -112,6 +121,17 @@ def replacement_lists(x, a):
         return a[x.upper().replace("COUNTY", "").replace(" ", "")]
     else:
         return ""
+
+def reorder_columns(frame, column_list):
+    cols = list(frame.columns.values)
+    index = cols.index(column_list[0])
+    for col in column_list:
+        cols.remove(col)
+        cols.insert(index, col)
+        index+=1
+    
+    frame = frame.reindex(columns=cols)
+    return frame
 
 if __name__ == '__main__':
     print(translate(argv[1], argv[2]))
