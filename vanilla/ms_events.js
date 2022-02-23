@@ -57,7 +57,6 @@ const sendToPython = async(input) => {
         JSON File loading here is temporary
     */
 
-    //const config = 'C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\config\\default.config.json'
     let url = ""
     const data = await fetch('./config/default.config.json').then(response => {
         url = response.url;

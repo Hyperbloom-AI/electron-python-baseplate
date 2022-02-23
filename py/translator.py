@@ -51,8 +51,8 @@ def translate(path, config):
             elif(transformation["type"] == "groupColumns"):
                 df = reorder_columns(df, transformation["columnList"])
 
-            #elif(transformation["type"] == "convertToSixDigitFICE"):
-                #convert_to_fice(df, function["columnName"])
+            elif(transformation["type"] == "convertToSixDigitFICE"):
+                convert_to_fice(df, function["columnName"])
             else:
                 print("Hit default!")
     try:
@@ -137,11 +137,10 @@ def reorder_columns(frame, column_list):
     return frame
     
 def six_digit_fice(x):
-    strx = str(x)
-    while(len(strx) < 6):
-        strx = '0' + strx
-    
-    return strx
+    if(pd.isna(x)):
+        return ""
+    else:
+        return f'"{int(x):06d}"'
 
 def convert_to_fice(frame, column_name):
     frame[column_name] = frame[column_name].apply(six_digit_fice)
