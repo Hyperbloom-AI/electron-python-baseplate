@@ -58,9 +58,14 @@ const sendToPython = async(input) => {
     */
 
     //const config = 'C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\config\\default.config.json'
-    const config = 'C:\\Users\\cmcn\\OneDrive\\Documents\\Work Projects\\electron-python-baseplate\\config\\default.config.json'
+    let url = ""
+    const data = await fetch('./config/default.config.json').then(response => {
+        url = response.url;
+    });
 
-    var result = await window.python.sendCalculation(input, config)
+    const config_url = url.replaceAll('%20', ' ').replaceAll('file:///', '').replaceAll('/', '\\')
+
+    var result = await window.python.sendCalculation(input, config_url)
     return result
 }
     
