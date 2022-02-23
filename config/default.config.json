@@ -584,6 +584,156 @@
                     "new": "GEORGIA_COUNTY"
                 }
             ]
+        },
+        {
+            "columnName": "custom_questions_1990391226441866468_how_long_have_you_continuously_resided_in_georgia_years",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_1990391226441866468_how_long_have_you_continuously_resided_in_georgia_years",
+                    "new": "GAREZ_YEARS"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_6802816803329693796_months",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_6802816803329693796_months",
+                    "new": "GAREZ_MONTHS"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_7607460567184812725_current_state",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_7607460567184812725_current_state",
+                    "new": "GAREZ_PHY1_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_7306043813069697090_1_previous_state",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_7306043813069697090_1_previous_state",
+                    "new": "GAREZ_PHY2_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_3346121778219860319_2_previous_state",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_3346121778219860319_2_previous_state",
+                    "new": "GAREZ_PHY3_STATE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_851870053239460979_have_you_filed_a_georgia_income_tax_return_claiming_georgia_residency_in_the_past_year_or_have_your_parents_legal_guardians_if_you_are_a_tax_dependent_of_theirs_filed_a_georgia_tax_return_claiming_georgia_residency_in_t",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_851870053239460979_have_you_filed_a_georgia_income_tax_return_claiming_georgia_residency_in_the_past_year_or_have_your_parents_legal_guardians_if_you_are_a_tax_dependent_of_theirs_filed_a_georgia_tax_return_claiming_georgia_residency_in_t",
+                    "new": "GAREZ_FILED_TAX"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_2003734251460243099_will_you_have_been_registered_to_vote_in_georgia_for_at_least_one_year_prior_to_your_term_of_enrollment",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_2003734251460243099_will_you_have_been_registered_to_vote_in_georgia_for_at_least_one_year_prior_to_your_term_of_enrollment",
+                    "new": "GAREZ_VOTER"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_6342566671073863782_do_you_own_or_operate_a_motor_vehicle",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_6342566671073863782_do_you_own_or_operate_a_motor_vehicle",
+                    "new": "GAREZ_DRIVER"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_2862126518275267566_if_yes_has_it_been_registered_in_any_state_other_than_georgia_during_the_past_year",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_2862126518275267566_if_yes_has_it_been_registered_in_any_state_other_than_georgia_during_the_past_year",
+                    "new": "GAREZ_TAG"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_6984800283625759343_do_you_hold_a_valid_georgia_driver_s_license_or_georgia_state_identification_card",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_6984800283625759343_do_you_hold_a_valid_georgia_driver_s_license_or_georgia_state_identification_card",
+                    "new": "GAREZ_GA_DL"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_7861630135075064326_please_list_the_issue_date_month_year",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_7861630135075064326_please_list_the_issue_date_month_year",
+                    "new": "GAREZ_GA_DL_DT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_4966518592897702764_is_the_issue_date_the_first_time_your_license_was_issued_or_a_renewal_date",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_4966518592897702764_is_the_issue_date_the_first_time_your_license_was_issued_or_a_renewal_date",
+                    "new": "GAREZ_GA_DL_TYPE"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_ga_county",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ugagrad_ga_county",
+                    "new": "GAREZ_GA_ID"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugg_app_type",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_ugg_app_type",
+                    "new": "GAREZ_GA_ID_DT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_252383216642704910_during_the_past_12_months_have_you_attended_an_educational_institution_outside_of_georgia",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_252383216642704910_during_the_past_12_months_have_you_attended_an_educational_institution_outside_of_georgia",
+                    "new": "GAREZ_OOS_SCHOOL"
+                }
+            ]
         }
     ],
     "OUTPUT_FILE_NAME_FORMAT": {
