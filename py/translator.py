@@ -1,7 +1,6 @@
 from fileinput import filename
 from sys import argv
-import datetime, pandas as pd
-import json
+import datetime, pandas as pd, json, os
 
 def translate(path, config):
     df = pd.read_csv(path) # path contains an absolute path to read
@@ -9,11 +8,14 @@ def translate(path, config):
     states_list = {}
     ga_counties_list = {}
     ga_counties_list
+    __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     with open(config) as json_file:
         config_reader = json.load(json_file)
-    with open('C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\py\\states.json') as json_file_st:
+    with open(os.path.join(__location__, 'states.json')) as json_file_st:
+    # with open('C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\py\\states.json') as json_file_st:
         states_list = list((json.load(json_file_st)).keys())
-    with open('C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\py\\ga-counties.json') as json_file_co:
+    with open(os.path.join(__location__, 'ga-counties.json')) as json_file_co:
+    #with open('C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\py\\ga-counties.json') as json_file_co:
          ga_counties_list = json.load(json_file_co)
 
     
