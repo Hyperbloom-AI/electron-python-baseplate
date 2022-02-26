@@ -1,4 +1,5 @@
 from fileinput import filename
+import sys
 from sys import argv
 import datetime, pandas as pd, json, os
 
@@ -53,6 +54,18 @@ def translate(path, config):
 
             elif(transformation["type"] == "convertToSixDigitFICE"):
                 convert_to_fice(df, function["columnName"])
+
+            elif(transformation["type"] == "splitDateColumn"):
+                split_date_column(df, function["columnName"], transformation['splitColumnNames'])
+                convert_num_to_month(df, transformation['splitColumnNames'][0])
+                col_col = transformation['splitColumnNames']
+                col_col.insert(0, function["columnName"])
+                df = reorder_columns(df, col_col)
+                df.drop(columns=function["columnName"], inplace=True)
+
+            elif(transformation["type"] == "dropColumn"):
+                df.drop(columns=function["columnName"], inplace=True)
+
             else:
                 print("Hit default!")
     try:
@@ -127,23 +140,40 @@ def replacement_lists(x, a):
 
 def reorder_columns(frame, column_list):
     cols = list(frame.columns.values)
-    index = cols.index(column_list[0])
-    for col in column_list:
-        cols.remove(col)
-        cols.insert(index, col)
-        index+=1
-
-    frame = frame.reindex(columns=cols)
-    return frame
+    try:
+        index = cols.index(column_list[0])
+        for col in column_list:
+            cols.remove(col)
+            cols.insert(index, col)
+            index+=1
+        frame = frame.reindex(columns=cols)
+        return frame
+    except:
+        return frame
     
 def six_digit_fice(x):
-    if(pd.isna(x)):
+    if(pd.isna(x) or x == ""):
         return ""
     else:
         return f'"{int(x):06d}"'
 
 def convert_to_fice(frame, column_name):
     frame[column_name] = frame[column_name].apply(six_digit_fice)
+
+def split_date_column(frame, column_name, new_columns):
+    if(frame[column_name].isnull().all()):
+        frame[new_columns] = ""
+    else:
+        frame[new_columns] = frame[column_name].str.split("/", expand=True)
+
+def convert_num_to_month(frame, column_name):
+    frame[column_name] = frame[column_name].apply(n_2_m)
+
+def n_2_m(x):
+    if(pd.isna(x) or x == ""):
+        return ""
+    month_list = ['January', 'February', "March", 'April', 'May', 'June', 'July', 'August', 'Sepetember', 'October', 'November', 'December']
+    return month_list[((int(float(x)))-1)]
     
 
 if __name__ == '__main__':
