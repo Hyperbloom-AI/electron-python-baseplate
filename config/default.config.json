@@ -536,6 +536,24 @@
                     ]
                 },
                 {
+                    "type": "replaceValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "applicant_verified_date",
+                    "replacements": [
+                        {
+                            "value": "C",
+                            "replacement": "51.50"
+                        },
+                        {
+                            "value": "A",
+                            "replacement": "77.25"
+                        },
+                        {
+                            "value": "R",
+                            "replacement": "51.50"
+                        }
+                    ]
+                },
+                {
                     "type": "changeColName",
                     "original": "citizenship_status",
                     "new": "CITIZEN_CODE"
@@ -578,6 +596,9 @@
                 {
                     "type": "replaceWithValueInList",
                     "list": "Georgia Counties"
+                },
+                {
+                    "type": "zFill"
                 },
                 {
                     "type": "changeColName",
@@ -1397,6 +1418,212 @@
             "transformations": [
                 {
                     "type": "dropColumn"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_6291555495114229030_have_you_ever_attended_uga_as_an_undergraduate_student",
+            "transformations": [
+                {
+                    "type": "removeColumnsUntilIndex",
+                    "index": 144
+                },
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_6291555495114229030_have_you_ever_attended_uga_as_an_undergraduate_student",
+                    "new": "ATTEND_UG_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_6174479674781188413_have_you_ever_attended_uga_as_a_graduate_student",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "custom_questions_6174479674781188413_have_you_ever_attended_uga_as_a_graduate_student",
+                    "new": "ATTEND_GR_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "designation_program_start_term",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "Fall",
+                            "new": "08"
+                        },
+                        {
+                            "original": "Spring",
+                            "new": "02"
+                        },
+                        {
+                            "original": "Summer",
+                            "new": "05"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "columnName": "designation_program_start_year",
+            "transformations": [
+                {
+                    "type": "combineWithColumn",
+                    "secondary": "designation_program_start_term"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "designation_program_start_year",
+                    "new": "INTENDED_TERM"
+                }
+            ]
+        },
+        {
+            "columnName": "designation_program_level",
+            "transformations": [
+                {
+                    "type": "replaceValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "Athens, Gwinnett",
+                    "replacements": [
+                        {
+                            "value": "MPH",
+                            "replacement": "Athens"
+                        },
+                        {
+                            "value": "DrPH",
+                            "replacement": "Gwinnett"
+                        }
+                    ]
+                },
+                {
+                    "type": "replaceValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "Masters, Doctoral",
+                    "replacements": [
+                        {
+                            "value": "MPH",
+                            "replacement": "Masters"
+                        },
+                        {
+                            "value": "DrPH",
+                            "replacement": "Doctoral"
+                        }
+                    ]
+                },
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "MPH",
+                            "new": "MPH_PUBH"
+                        },
+                        {
+                            "original": "DrPH",
+                            "new": "DRPH_PUBH_GW"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "designation_program_level",
+                    "new": "INTENDED_PROGRAM"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_work_end_2",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "*",
+                            "new": "PUBH"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "custom_field_work_end_2",
+                    "new": "DEPARTMENT"
+                }
+            ]
+        },
+        {
+            "columnName": "designation",
+            "transformations": [
+                {
+                    "type": "replaceWithValueInList",
+                    "list": "Banner Codes"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "designation",
+                    "new": "AREA_OF_EMPHASIS"
+                }
+            ]
+        },
+        {
+            "columnName": "applicant_verified_date",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "applicant_verified_date",
+                    "new": "APP_SUBMIT_DATE"
+                }
+            ]
+        },
+        {
+            "columnName": "application_complete_date",
+            "transformations": [
+                {
+                    "type": "convertToEAID"
+                },
+                {
+                    "type": "changeColName",
+                    "original": "applicant_verified_date",
+                    "new": "EXTERNAL_APP_ID"
+                }
+            ]
+        },
+        {
+            "columnName": "Public Health",
+            "transformations": [
+                {
+                    "type": "replace",
+                    "replacements": [
+                        {
+                            "original": "*",
+                            "new": "Public Health"
+                        }
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "original": "Public Health",
+                    "new": "APP_SOURCE"
+                }
+            ]
+        },
+        {
+            "columnName": "Athens, Gwinnett",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "Athens, Gwinnett",
+                    "new": "CAMPUS"
+                }
+            ]
+        },
+        {
+            "columnName": "Masters, Doctoral",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "original": "Masters, Doctoral",
+                    "new": "DEGREE_LEVEL"
                 }
             ]
         }
