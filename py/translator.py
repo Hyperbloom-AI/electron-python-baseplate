@@ -7,6 +7,8 @@ from random import randrange
 def translate(path, config):
     df = pd.read_csv(path) # path contains an absolute path to read
     config_reader, states_list, ga_counties_list, banner_codes = {}
+
+    # Loads the config file and 
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     with open(config) as json_file:
         config_reader = json.load(json_file)
