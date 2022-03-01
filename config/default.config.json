@@ -7,7 +7,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ss_num",
                     "new": "SS_NUM"
                 }
             ]
@@ -17,7 +16,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "date_of_birth",
                     "new": "BIRTH_DATE"
                 }
             ]
@@ -27,7 +25,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "last_name",
                     "new": "NAME_LAST"
                 }
             ]
@@ -37,7 +34,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "first_name",
                     "new": "NAME_FIRST"
                 }
             ]
@@ -47,7 +43,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "middle_name",
                     "new": "NAME_MIDDLE"
                 }
             ]
@@ -57,7 +52,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "suffix",
                     "new": "NAME_SUFFIX"
                 }
             ]
@@ -67,7 +61,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "preferred_first_name",
                     "new": "NAME_PREFERRED"
                 }
             ]
@@ -77,7 +70,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "alt_last_name",
                     "new": "NAME_ALIAS"
                 }
             ]
@@ -100,7 +92,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "gender",
                     "new": "GENDER"
                 }
             ]
@@ -110,7 +101,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "email",
                     "new": "EMAIL"
                 }
             ]
@@ -120,7 +110,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "current_street_address",
                     "new": "MAIL_STREET"
                 }
             ]
@@ -130,7 +119,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "current_street_address_2",
                     "new": "MAIL_STREET2"
                 }
             ]
@@ -140,7 +128,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "current_city",
                     "new": "MAIL_CITY"
                 }
             ]
@@ -154,7 +141,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "current_state_code",
                     "new": "MAIL_STATE"
                 }
             ]
@@ -164,7 +150,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_special_option",
                     "new": "MAIL_PROVINCE"
                 }
             ]
@@ -177,7 +162,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "current_postal_code",
                     "new": "MAIL_ZIP"
                 }
             ]
@@ -187,7 +171,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_work_begin_4",
                     "new": "MAIL_POSTAL"
                 }
             ]
@@ -197,7 +180,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "current_country",
                     "new": "MAIL_NATION"
                 }
             ]
@@ -207,7 +189,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "permanent_street_address",
                     "new": "PERM_STREET"
                 }
             ]
@@ -217,7 +198,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "permanent_street_address_2",
                     "new": "PERM_STREET2"
                 }
             ]
@@ -227,7 +207,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "permanent_city",
                     "new": "PERM_CITY"
                 }
             ]
@@ -241,7 +220,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "permanent_state_code",
                     "new": "PERM_STATE"
                 }
             ]
@@ -251,7 +229,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "Perm_Providence",
                     "new": "PERM_PROVINCE"
                 }
             ]
@@ -264,7 +241,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "permanent_postal_code",
                     "new": "PERM_ZIP"
                 }
             ]
@@ -274,7 +250,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_work_phone",
                     "new": "PERM_POSTAL"
                 }
             ]
@@ -284,7 +259,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "permanent_country",
                     "new": "PERM_NATION"
                 }
             ]
@@ -298,7 +272,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_hispanic",
                     "new": "HISPANIC_YN"
                 }
             ]
@@ -317,7 +290,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_white",
                     "new": "RACE_WHITE"
                 }
             ]
@@ -336,7 +308,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_black",
                     "new": "RACE_BLACK"
                 }
             ]
@@ -355,7 +326,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_asian",
                     "new": "RACE_ASIAN"
                 }
             ]
@@ -374,7 +344,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_asian_indian",
                     "new": "RACE_INDIAN"
                 }
             ]
@@ -393,7 +362,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "race_hawaiian",
                     "new": "RACE_HAWAIIAN"
                 }
             ]
@@ -403,7 +371,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_8777381953800759512_are_you_or_will_you_be_at_time_of_enrollment_a_current_or_former_member_of_the_us_military",
                     "new": "MILITARY_EXPERIENCE"
                 }
             ]
@@ -413,7 +380,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_8966288556260434901_what_branch_or_component",
                     "new": "MILITARY_BRANCH_COMPONENT"
                 }
             ]
@@ -423,7 +389,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_8711108970603192069_are_you_the_spouse_or_dependent_of_a_us_military_service_member_or_veteran",
                     "new": "MILITARY_EXPERIENCE_DEP"
                 }
             ]
@@ -433,7 +398,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_788149636291138971_what_branch_or_component",
                     "new": "MILITARY_BRANCH_COMPONENT_DEP"
                 }
             ]
@@ -443,7 +407,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "city_of_birth",
                     "new": "BIRTH_CITY"
                 }
             ]
@@ -457,7 +420,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "state_of_birth_code",
                     "new": "BIRTH_STATE"
                 }
             ]
@@ -467,7 +429,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "country_of_birth",
                     "new": "BIRTH_NATION"
                 }
             ]
@@ -477,7 +438,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_georgia_res",
                     "new": "EMPTY1"
                 }
             ]
@@ -490,7 +450,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "preferred_phone",
                     "new": "PHONE_PRIMARY"
                 }
             ]
@@ -500,7 +459,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "alternate_phone",
                     "new": "PHONE_TEXT"
                 }
             ]
@@ -510,7 +468,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "citizenship",
                     "new": "CITIZEN_NATION"
                 }
             ]
@@ -537,7 +494,7 @@
                 },
                 {
                     "type": "replaceValuesInSeparateColumnBasedOnThisColumn",
-                    "separateColumnName": "applicant_verified_date",
+                    "separateColumnName": "App Fee",
                     "replacements": [
                         {
                             "value": "C",
@@ -555,7 +512,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "citizenship_status",
                     "new": "CITIZEN_CODE"
                 }
             ]
@@ -575,7 +531,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "state_of_residence_code",
                     "new": "RESIDENCE_STATE"
                 }
             ]
@@ -585,7 +540,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_366466470399805345_are_you_applying_for_in-state_tuition",
                     "new": "GEORGIA_RESIDENT"
                 }
             ]
@@ -602,7 +556,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "current_county",
                     "new": "GEORGIA_COUNTY"
                 }
             ]
@@ -612,7 +565,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_1990391226441866468_how_long_have_you_continuously_resided_in_georgia_years",
                     "new": "GAREZ_YEARS"
                 }
             ]
@@ -622,7 +574,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_6802816803329693796_months",
                     "new": "GAREZ_MONTHS"
                 }
             ]
@@ -632,7 +583,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_7607460567184812725_current_state",
                     "new": "GAREZ_PHY1_STATE"
                 }
             ]
@@ -642,7 +592,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_7306043813069697090_1_previous_state",
                     "new": "GAREZ_PHY2_STATE"
                 }
             ]
@@ -652,7 +601,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_3346121778219860319_2_previous_state",
                     "new": "GAREZ_PHY3_STATE"
                 }
             ]
@@ -662,7 +610,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_851870053239460979_have_you_filed_a_georgia_income_tax_return_claiming_georgia_residency_in_the_past_year_or_have_your_parents_legal_guardians_if_you_are_a_tax_dependent_of_theirs_filed_a_georgia_tax_return_claiming_georgia_residency_in_t",
                     "new": "GAREZ_FILED_TAX"
                 }
             ]
@@ -672,7 +619,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_2003734251460243099_will_you_have_been_registered_to_vote_in_georgia_for_at_least_one_year_prior_to_your_term_of_enrollment",
                     "new": "GAREZ_VOTER"
                 }
             ]
@@ -682,7 +628,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_6342566671073863782_do_you_own_or_operate_a_motor_vehicle",
                     "new": "GAREZ_DRIVER"
                 }
             ]
@@ -692,7 +637,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_2862126518275267566_if_yes_has_it_been_registered_in_any_state_other_than_georgia_during_the_past_year",
                     "new": "GAREZ_TAG"
                 }
             ]
@@ -702,7 +646,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_6984800283625759343_do_you_hold_a_valid_georgia_driver_s_license_or_georgia_state_identification_card",
                     "new": "GAREZ_GA_DL"
                 }
             ]
@@ -712,7 +655,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_7861630135075064326_please_list_the_issue_date_month_year",
                     "new": "GAREZ_GA_DL_DT"
                 }
             ]
@@ -722,7 +664,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_4966518592897702764_is_the_issue_date_the_first_time_your_license_was_issued_or_a_renewal_date",
                     "new": "GAREZ_GA_DL_TYPE"
                 }
             ]
@@ -732,7 +673,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_ga_county",
                     "new": "GAREZ_GA_ID"
                 }
             ]
@@ -742,7 +682,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugg_app_type",
                     "new": "GAREZ_GA_ID_DT"
                 }
             ]
@@ -764,7 +703,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_252383216642704910_during_the_past_12_months_have_you_attended_an_educational_institution_outside_of_georgia",
                     "new": "GAREZ_OOS_SCHOOL"
                 }
             ]
@@ -774,7 +712,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_4150296308230486407_does_the_institution_assess_out-of-state_tuition_for_you",
                     "new": "GAREZ_OOS_TUITION"
                 }
             ]
@@ -800,7 +737,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "fice_code_0",
                     "new": "COLLEGE_FICE.1"
                 }
             ]
@@ -810,7 +746,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_name_0",
                     "new": "COLLEGE_NAME.1"
                 }
             ]
@@ -820,7 +755,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_city",
                     "new": "COLLEGE_CITY.1"
                 }
             ]
@@ -830,7 +764,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_from_0",
                     "new": "COLLEGE_BEGIN.1"
                 }
             ]
@@ -840,7 +773,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_to_0",
                     "new": "COLLEGE_END.1"
                 }
             ]
@@ -850,7 +782,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_primary_major_0",
                     "new": "COLLEGE_MAJOR.1"
                 }
             ]
@@ -860,7 +791,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_code_0",
                     "new": "COLLEGE_DEGREE.1"
                 }
             ]
@@ -907,7 +837,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "fice_code_1",
                     "new": "COLLEGE_FICE.2"
                 }
             ]
@@ -917,7 +846,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_name_1",
                     "new": "COLLEGE_NAME.2"
                 }
             ]
@@ -927,7 +855,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_city_2",
                     "new": "COLLEGE_CITY.2"
                 }
             ]
@@ -937,7 +864,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_from_1",
                     "new": "COLLEGE_BEGIN.2"
                 }
             ]
@@ -947,7 +873,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_to_1",
                     "new": "COLLEGE_END.2"
                 }
             ]
@@ -957,7 +882,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_primary_major_1",
                     "new": "COLLEGE_MAJOR.2"
                 }
             ]
@@ -967,7 +891,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_code_1",
                     "new": "COLLEGE_DEGREE.2"
                 }
             ]
@@ -1014,7 +937,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "fice_code_2",
                     "new": "COLLEGE_FICE.3"
                 }
             ]
@@ -1024,7 +946,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_name_2",
                     "new": "COLLEGE_NAME.3"
                 }
             ]
@@ -1034,7 +955,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_city_3",
                     "new": "COLLEGE_CITY.3"
                 }
             ]
@@ -1044,7 +964,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_from_2",
                     "new": "COLLEGE_BEGIN.3"
                 }
             ]
@@ -1054,7 +973,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_to_2",
                     "new": "COLLEGE_END.3"
                 }
             ]
@@ -1064,7 +982,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_primary_major_2",
                     "new": "COLLEGE_MAJOR.3"
                 }
             ]
@@ -1074,7 +991,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_code_2",
                     "new": "COLLEGE_DEGREE.3"
                 }
             ]
@@ -1121,7 +1037,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "fice_code_3",
                     "new": "COLLEGE_FICE.4"
                 }
             ]
@@ -1131,7 +1046,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_name_3",
                     "new": "COLLEGE_NAME.4"
                 }
             ]
@@ -1141,7 +1055,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_city_4",
                     "new": "COLLEGE_CITY.4"
                 }
             ]
@@ -1151,7 +1064,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_from_3",
                     "new": "COLLEGE_BEGIN.4"
                 }
             ]
@@ -1161,7 +1073,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_to_3",
                     "new": "COLLEGE_END.4"
                 }
             ]
@@ -1171,7 +1082,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_primary_major_3",
                     "new": "COLLEGE_MAJOR.4"
                 }
             ]
@@ -1181,7 +1091,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_code_3",
                     "new": "COLLEGE_DEGREE.4"
                 }
             ]
@@ -1228,7 +1137,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "fice_code_4",
                     "new": "COLLEGE_FICE.5"
                 }
             ]
@@ -1238,7 +1146,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_name_4",
                     "new": "COLLEGE_NAME.5"
                 }
             ]
@@ -1248,7 +1155,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_city_5",
                     "new": "COLLEGE_CITY.5"
                 }
             ]
@@ -1258,7 +1164,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_from_4",
                     "new": "COLLEGE_BEGIN.5"
                 }
             ]
@@ -1268,7 +1173,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_attended_to_4",
                     "new": "COLLEGE_END.5"
                 }
             ]
@@ -1278,7 +1182,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_primary_major_4",
                     "new": "COLLEGE_MAJOR.5"
                 }
             ]
@@ -1288,7 +1191,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "college_first_degree_code_4",
                     "new": "COLLEGE_DEGREE.5"
                 }
             ]
@@ -1335,7 +1237,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad-college_ceeb_2",
                     "new": "COLLEGE_FICE.6"
                 }
             ]
@@ -1345,7 +1246,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_name_2",
                     "new": "COLLEGE_NAME.6"
                 }
             ]
@@ -1355,7 +1255,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_state_2",
                     "new": "COLLEGE_CITY.6"
                 }
             ]
@@ -1365,7 +1264,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_filler",
                     "new": "COLLEGE_BEGIN.6"
                 }
             ]
@@ -1375,7 +1273,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad-transaction_date",
                     "new": "COLLEGE_END.6"
                 }
             ]
@@ -1385,7 +1282,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_contact_province_1",
                     "new": "COLLEGE_MAJOR.6"
                 }
             ]
@@ -1395,7 +1291,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_field_ugagrad_college_degree_2",
                     "new": "COLLEGE_DEGREE.6"
                 }
             ]
@@ -1430,7 +1325,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_6291555495114229030_have_you_ever_attended_uga_as_an_undergraduate_student",
                     "new": "ATTEND_UG_YN"
                 }
             ]
@@ -1440,8 +1334,70 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "custom_questions_6174479674781188413_have_you_ever_attended_uga_as_a_graduate_student",
                     "new": "ATTEND_GR_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_questions_4243003586792090160_are_you_returning_to_the_same_graduate_program",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "ATTEND_GRZ_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "policy_violation",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "CONDUCT_SUSPEND_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "policy_violation_explanation",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "CONDUCT_SUSPEND_TEXT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_hca_postal",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "CONDUCT_CRIMINAL_YN"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_hca_country",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "CONDUCT_CRIMINAL_TEXT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_college_begin_5",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "FIRSTGEN_PARENT1"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_mat_total_raw_score",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "FIRSTGEN_PARENT2"
                 }
             ]
         },
@@ -1476,7 +1432,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "designation_program_start_year",
                     "new": "INTENDED_TERM"
                 }
             ]
@@ -1527,7 +1482,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "designation_program_level",
                     "new": "INTENDED_PROGRAM"
                 }
             ]
@@ -1546,7 +1500,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "custom_field_work_end_2",
                     "new": "DEPARTMENT"
                 }
             ]
@@ -1560,7 +1513,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "designation",
                     "new": "AREA_OF_EMPHASIS"
                 }
             ]
@@ -1570,8 +1522,16 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "applicant_verified_date",
                     "new": "APP_SUBMIT_DATE"
+                }
+            ]
+        },
+        {
+            "columnName": "App Fee",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "APP_FEE_DUE_GS"
                 }
             ]
         },
@@ -1583,8 +1543,34 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "applicant_verified_date",
                     "new": "EXTERNAL_APP_ID"
+                }
+            ]
+        },
+        {
+            "columnName": "cas_id",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "EXTERNAL_PERSON_ID"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_college_degree_date_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "APP_FEE_WAIVER_AMT"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad-rec_inst_2",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "APP_FEE_WAIVER_TYPE"
                 }
             ]
         },
@@ -1602,7 +1588,6 @@
                 },
                 {
                     "type": "changeColName",
-                    "original": "Public Health",
                     "new": "APP_SOURCE"
                 }
             ]
@@ -1612,7 +1597,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "Athens, Gwinnett",
                     "new": "CAMPUS"
                 }
             ]
@@ -1622,7 +1606,6 @@
             "transformations": [
                 {
                     "type": "changeColName",
-                    "original": "Masters, Doctoral",
                     "new": "DEGREE_LEVEL"
                 }
             ]

@@ -214,3 +214,11 @@ input[type="file"] {
 .versions {
     display: none;
 }
+
+body {
+    padding: 20px
+}
+
+.trans__wrapper {
+    display: flex;
+}

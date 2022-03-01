@@ -6,9 +6,9 @@ from random import randrange
 
 def translate(path, config):
     df = pd.read_csv(path) # path contains an absolute path to read
-    config_reader, states_list, ga_counties_list, banner_codes = {}
+    config_reader, states_list, ga_counties_list, banner_codes = {}, {}, {}, {}
 
-    # Loads the config file and 
+    # Loads the config file and the necessary lists
     __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
     with open(config) as json_file:
         config_reader = json.load(json_file)
@@ -25,7 +25,7 @@ def translate(path, config):
         transformation_list = function["transformations"]
         for transformation in transformation_list:
             if(transformation["type"] == "changeColName"):
-                change_column_name(df, transformation["original"], transformation["new"])
+                change_column_name(df, function["columnName"], transformation["new"])
 
             elif(transformation["type"] == "replace"):
                 replace_values(df, function["columnName"], transformation["replacements"])
