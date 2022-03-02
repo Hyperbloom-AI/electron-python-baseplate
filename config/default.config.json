@@ -702,6 +702,10 @@
                     "replaceType": "defaultNull"
                 },
                 {
+                    "type": "replaceEmpty",
+                    "replacement": "N"
+                },
+                {
                     "type": "changeColName",
                     "new": "GAREZ_OOS_SCHOOL"
                 }
@@ -719,6 +723,20 @@
         {
             "columnName": "fice_code_0",
             "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_0",
+                        "college_name_0",
+                        "custom_field_ugagrad_college_city",
+                        "college_attended_from_0",
+                        "college_attended_to_0",
+                        "college_first_degree_primary_major_0",
+                        "college_first_degree_code_0",
+                        "college_first_degree_date_0"
+                    ],
+                    "index": 72
+                },
                 {
                     "type": "convertToSixDigitFICE"
                 },
@@ -820,6 +838,20 @@
             "columnName": "fice_code_1",
             "transformations": [
                 {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_1",
+                        "college_name_1",
+                        "custom_field_ugagrad_college_city_2",
+                        "college_attended_from_1",
+                        "college_attended_to_1",
+                        "college_first_degree_primary_major_1",
+                        "college_first_degree_code_1",
+                        "college_first_degree_date_1"
+                    ],
+                    "index": 72
+                },
+                {
                     "type": "convertToSixDigitFICE"
                 },
                 {
@@ -919,6 +951,20 @@
         {
             "columnName": "fice_code_2",
             "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_2",
+                        "college_name_2",
+                        "custom_field_ugagrad_college_city_3",
+                        "college_attended_from_2",
+                        "college_attended_to_2",
+                        "college_first_degree_primary_major_2",
+                        "college_first_degree_code_2",
+                        "college_first_degree_date_2"
+                    ],
+                    "index": 81
+                },
                 {
                     "type": "convertToSixDigitFICE"
                 },
@@ -1020,6 +1066,20 @@
             "columnName": "fice_code_3",
             "transformations": [
                 {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_3",
+                        "college_name_3",
+                        "custom_field_ugagrad_college_city_4",
+                        "college_attended_from_3",
+                        "college_attended_to_3",
+                        "college_first_degree_primary_major_3",
+                        "college_first_degree_code_3",
+                        "college_first_degree_date_3"
+                    ],
+                    "index": 90
+                },
+                {
                     "type": "convertToSixDigitFICE"
                 },
                 {
@@ -1120,6 +1180,20 @@
             "columnName": "fice_code_4",
             "transformations": [
                 {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_4",
+                        "college_name_4",
+                        "custom_field_ugagrad_college_city_5",
+                        "college_attended_from_4",
+                        "college_attended_to_4",
+                        "college_first_degree_primary_major_4",
+                        "college_first_degree_code_4",
+                        "college_first_degree_date_4"
+                    ],
+                    "index": 99
+                },
+                {
                     "type": "convertToSixDigitFICE"
                 },
                 {
@@ -1217,22 +1291,36 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad-college_ceeb_2",
+            "columnName": "fice_code_5",
             "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_5",
+                        "college_name_5",
+                        "custom_field_ugagrad_college_city_6",
+                        "college_attended_from_5",
+                        "college_attended_to_5",
+                        "college_first_degree_primary_major_5",
+                        "college_first_degree_code_5",
+                        "college_first_degree_date_5"
+                    ],
+                    "index": 108
+                },
                 {
                     "type": "convertToSixDigitFICE"
                 },
                 {
                     "type": "groupColumns",
                     "columnList": [
-                        "custom_field_ugagrad-college_ceeb_2",
-                        "custom_field_ugagrad_college_name_2",
-                        "custom_field_ugagrad_college_state_2",
-                        "custom_field_filler",
-                        "custom_field_ugagrad-transaction_date",
-                        "custom_field_contact_province_1",
-                        "custom_field_ugagrad_college_degree_2",
-                        "custom_field_ugagrad-asian_dl"
+                        "fice_code_5",
+                        "college_name_5",
+                        "custom_field_ugagrad_college_city_6",
+                        "college_attended_from_5",
+                        "college_attended_to_5",
+                        "college_first_degree_primary_major_5",
+                        "college_first_degree_code_5",
+                        "college_first_degree_date_5"
                     ]
                 },
                 {
@@ -1242,7 +1330,7 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad_college_name_2",
+            "columnName": "college_name_5",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1251,7 +1339,7 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad_college_state_2",
+            "columnName": "custom_field_ugagrad_college_city_6",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1260,7 +1348,7 @@
             ]
         },
         {
-            "columnName": "custom_field_filler",
+            "columnName": "college_attended_from_5",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1269,7 +1357,7 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad-transaction_date",
+            "columnName": "college_attended_to_5",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1278,7 +1366,7 @@
             ]
         },
         {
-            "columnName": "custom_field_contact_province_1",
+            "columnName": "college_first_degree_primary_major_5",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1287,7 +1375,7 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad_college_degree_2",
+            "columnName": "college_first_degree_code_5",
             "transformations": [
                 {
                     "type": "changeColName",
@@ -1296,7 +1384,7 @@
             ]
         },
         {
-            "columnName": "custom_field_ugagrad-asian_dl",
+            "columnName": "college_first_degree_date_5",
             "transformations": [
                 {
                     "type": "splitDateColumn",
@@ -1310,6 +1398,348 @@
         },
         {
             "columnName": "COLLEGE_DEGREE_DATE_DAY.6",
+            "transformations": [
+                {
+                    "type": "dropColumn"
+                }
+            ]
+        },
+        {
+            "columnName": "fice_code_6",
+            "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_6",
+                        "college_name_6",
+                        "custom_field_ugagrad_college_city_7",
+                        "college_attended_from_6",
+                        "college_attended_to_6",
+                        "college_first_degree_primary_major_6",
+                        "college_first_degree_code_6",
+                        "college_first_degree_date_6"
+                    ],
+                    "index": 117
+                },
+                {
+                    "type": "convertToSixDigitFICE"
+                },
+                {
+                    "type": "groupColumns",
+                    "columnList": [
+                        "fice_code_6",
+                        "college_name_6",
+                        "custom_field_ugagrad_college_city_7",
+                        "college_attended_from_6",
+                        "college_attended_to_6",
+                        "college_first_degree_primary_major_6",
+                        "college_first_degree_code_6",
+                        "college_first_degree_date_6"
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_FICE.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_name_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_NAME.7"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_college_city_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_CITY.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_from_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_BEGIN.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_to_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_END.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_primary_major_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_MAJOR.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_code_6",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_DEGREE.7"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_date_6",
+            "transformations": [
+                {
+                    "type": "splitDateColumn",
+                    "splitColumnNames": [
+                        "COLLEGE_DEGREE_DATE_MONTH.7",
+                        "COLLEGE_DEGREE_DATE_DAY.7",
+                        "COLLEGE_DEGREE_DATE_YEAR.7"
+                    ]
+                }
+            ]
+        },
+        {
+            "columnName": "COLLEGE_DEGREE_DATE_DAY.7",
+            "transformations": [
+                {
+                    "type": "dropColumn"
+                }
+            ]
+        },
+        {
+            "columnName": "fice_code_7",
+            "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_7",
+                        "college_name_7",
+                        "custom_field_ugagrad_college_city_8",
+                        "college_attended_from_7",
+                        "college_attended_to_7",
+                        "college_first_degree_primary_major_7",
+                        "college_first_degree_code_7",
+                        "college_first_degree_date_7"
+                    ],
+                    "index": 126
+                },
+                {
+                    "type": "convertToSixDigitFICE"
+                },
+                {
+                    "type": "groupColumns",
+                    "columnList": [
+                        "fice_code_7",
+                        "college_name_7",
+                        "custom_field_ugagrad_college_city_8",
+                        "college_attended_from_7",
+                        "college_attended_to_7",
+                        "college_first_degree_primary_major_7",
+                        "college_first_degree_code_7",
+                        "college_first_degree_date_7"
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_FICE.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_name_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_NAME.8"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_college_city_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_CITY.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_from_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_BEGIN.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_to_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_END.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_primary_major_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_MAJOR.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_code_7",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_DEGREE.8"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_date_7",
+            "transformations": [
+                {
+                    "type": "splitDateColumn",
+                    "splitColumnNames": [
+                        "COLLEGE_DEGREE_DATE_MONTH.8",
+                        "COLLEGE_DEGREE_DATE_DAY.8",
+                        "COLLEGE_DEGREE_DATE_YEAR.8"
+                    ]
+                }
+            ]
+        },
+        {
+            "columnName": "COLLEGE_DEGREE_DATE_DAY.8",
+            "transformations": [
+                {
+                    "type": "dropColumn"
+                }
+            ]
+        },
+        {
+            "columnName": "fice_code_8",
+            "transformations": [
+                {
+                    "type": "checkThenCreateNonexistantColumnListAtIndex",
+                    "columnList": [
+                        "fice_code_8",
+                        "college_name_8",
+                        "custom_field_ugagrad_college_city_9",
+                        "college_attended_from_8",
+                        "college_attended_to_8",
+                        "college_first_degree_primary_major_8",
+                        "college_first_degree_code_8",
+                        "college_first_degree_date_8"
+                    ],
+                    "index": 135
+                },
+                {
+                    "type": "convertToSixDigitFICE"
+                },
+                {
+                    "type": "groupColumns",
+                    "columnList": [
+                        "fice_code_8",
+                        "college_name_8",
+                        "custom_field_ugagrad_college_city_9",
+                        "college_attended_from_8",
+                        "college_attended_to_8",
+                        "college_first_degree_primary_major_8",
+                        "college_first_degree_code_8",
+                        "college_first_degree_date_8"
+                    ]
+                },
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_FICE.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_name_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_NAME.9"
+                }
+            ]
+        },
+        {
+            "columnName": "custom_field_ugagrad_college_city_9",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_CITY.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_from_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_BEGIN.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_attended_to_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_END.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_primary_major_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_MAJOR.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_code_8",
+            "transformations": [
+                {
+                    "type": "changeColName",
+                    "new": "COLLEGE_DEGREE.9"
+                }
+            ]
+        },
+        {
+            "columnName": "college_first_degree_date_8",
+            "transformations": [
+                {
+                    "type": "splitDateColumn",
+                    "splitColumnNames": [
+                        "COLLEGE_DEGREE_DATE_MONTH.9",
+                        "COLLEGE_DEGREE_DATE_DAY.9",
+                        "COLLEGE_DEGREE_DATE_YEAR.9"
+                    ]
+                }
+            ]
+        },
+        {
+            "columnName": "COLLEGE_DEGREE_DATE_DAY.9",
             "transformations": [
                 {
                     "type": "dropColumn"
@@ -1350,6 +1780,16 @@
         {
             "columnName": "policy_violation",
             "transformations": [
+                {
+                    "type": "replaceValuesInSeparateColumnBasedOnThisColumn",
+                    "separateColumnName": "custom_field_ugagrad_hca_postal",
+                    "replacements": [
+                        {
+                            "value": "N",
+                            "replacement": "N"
+                        }
+                    ]
+                },
                 {
                     "type": "changeColName",
                     "new": "CONDUCT_SUSPEND_YN"

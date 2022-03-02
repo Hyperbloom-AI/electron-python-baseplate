@@ -85,6 +85,9 @@ def translate(path, config):
             elif(transformation["type"] == "convertToEAID"):
                 getEAID(df, function["columnName"])
 
+            elif(transformation["type"] == "checkThenCreateNonexistantColumnListAtIndex"):
+                check_create_clist(df, transformation["columnList"], transformation["index"])
+
             else:
                 print("Hit default!")
     try:
@@ -251,6 +254,11 @@ def EAID(x):
     second = (str(randrange(61))).zfill(2)
     return year + month + day + hour + minute + second
 
+def check_create_clist(frame, columns, i):
+    for col in columns:
+        if col not in frame.columns:
+            frame.insert(i, col, None)
+        i+=1
 
 
     
