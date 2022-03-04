@@ -63,7 +63,8 @@ const sendToPython = async(input) => {
         url = response.url;
     });
 
-    const config_url = url.replaceAll('%20', ' ').replaceAll('file:///', '').replaceAll('/', '\\')
+    console.log(url.toString())
+    const config_url = url.toString().replace(/%20/g, ' ').replace('file:///', '').replaceAll('/', '\\')
 
     var result = await window.python.sendCalculation(input, config_url)
     return result

@@ -19,6 +19,7 @@ const createWindow = () => {
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
+            contextIsolation: true
         },
     })
 
@@ -62,6 +63,7 @@ const createWindow = () => {
 async function savePath(r) {
   return r
 }
+
 const iconName = path.join(__dirname, 'iconForDragAndDrop.png');
 const icon = fs.createWriteStream(iconName);
 
