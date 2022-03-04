@@ -1,6 +1,6 @@
 {
   "name": "sophas-to-graduate-database",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A desktop application to convert SOPHAS exports into SCHEMA for GDB",
   "repository": "https://github.com/Hyperbloom-AI/electron-python-baseplate",
   "main": "main.js",
