@@ -2,7 +2,7 @@
   "name": "sophas-to-graduate-database",
   "version": "1.0.0",
   "description": "A desktop application to convert SOPHAS exports into SCHEMA for GDB",
-  "repository": "https://github.com/Hyperbloom-AI/uga-sophas-application",
+  "repository": "https://github.com/Hyperbloom-AI/electron-python-baseplate",
   "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -58,7 +58,7 @@
           "config": {
             "repository": {
               "owner": "Hyperbloom-AI",
-              "name": "uga-sophas-application"
+              "name": "electron-python-baseplate"
             },
             "prerelease": true
           }
