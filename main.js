@@ -4,9 +4,7 @@ const path = require('path')
 const fs = require('fs')
 const https = require('https')
 
-require('update-electron-app')({
-  repo: 'Hyperbloom-AI/electron-python-baseplate'
-})
+require('update-electron-app')()
 
 /*
     Creates a new window that will load index.html
