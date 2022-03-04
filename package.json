@@ -1,6 +1,6 @@
 {
   "name": "sophas-to-graduate-database",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A desktop application to convert SOPHAS exports into SCHEMA for GDB",
   "repository": "https://github.com/Hyperbloom-AI/electron-python-baseplate",
   "main": "main.js",
@@ -8,7 +8,8 @@
     "start": "electron-forge start",
     "dev": "electron .",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "author": "Charles W. McNamara",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
+    "@electron-forge/publisher-github": "^6.0.0-beta.63",
     "electron": "^16.0.7"
   },
   "dependencies": {

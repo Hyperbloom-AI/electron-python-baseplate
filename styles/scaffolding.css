@@ -160,7 +160,8 @@ img {
     position: absolute;
     bottom: 9px;
     right: 15px;
-    font-size: 10px
+    font-size: 10px;
+    color: green
 }
 
 input[type="file"] {
