@@ -161,7 +161,6 @@ img {
     bottom: 9px;
     right: 15px;
     font-size: 10px;
-    color: yellow
 }
 
 input[type="file"] {
@@ -222,4 +221,11 @@ body {
 
 .trans__wrapper {
     display: flex;
+}
+
+.version-num {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 10px;
 }
