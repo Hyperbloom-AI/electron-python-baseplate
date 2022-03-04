@@ -1,0 +1,5 @@
+Types of Transformations:
+    changeColName
+    removeIfNotInList
+    replace
+    convertToZip
