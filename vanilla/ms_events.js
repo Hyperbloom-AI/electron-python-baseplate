@@ -9,6 +9,7 @@ const settingsContent = document.getElementById("innerSettings");
 const fileInput = document.getElementById("input");
 const fileName = document.getElementById("inputText");
 const submitButton = document.getElementById("submitButton");
+const rfw = document.getElementById("rfw")
 
 // File tracking
 var currentFile = null
@@ -75,18 +76,45 @@ const sendToPython = async(input) => {
 submitButton.addEventListener('click', async() => {
     var filePath = fileInput.files[0].path
     const res = await sendToPython(filePath);
-    
 
+    if(document.getElementById("fowra")) {
+        document.getElementById("fowra").remove();
+    }
+
+    const fileElementWrapper = document.createElement('div')
+    fileElementWrapper.classList.add('file_output__wrapper')
+    fileElementWrapper.setAttribute('id', 'fowra')
+    
     const newFile = JSON.parse(res).file
     const statusCode = JSON.parse(res).statusCode
     const statusText = JSON.parse(res).statusText
 
-    console.log(res)
+    if(newFile) {
+        console.log("File Exists")
 
-    document.getElementById('drag').ondragstart = (event) => {
-        event.preventDefault()
-        window.electron.startDrag(newFile)
+        const fileDraggable = document.createElement('div')
+        fileDraggable.classList.add('draggable-file')
+        fileDraggable.setAttribute('id', 'drag')
+        fileDraggable.setAttribute('draggable', true)
+
+        fileElementWrapper.appendChild(fileDraggable)
+
+        fileDraggable.ondragstart = (event) => {
+            event.preventDefault()
+            window.electron.startDrag(newFile)
+        }
+    
+        fileDraggable.innerHTML = newFile
+    } else {
+        console.log("File does not exist due to a python error")
     }
+    const stElement = document.createElement('p')
+    const scElement = document.createElement('p')
+    const scc = document.createElement('span')
+    scElement.innerHTML = "Response Code: " + (statusCode == 200 ? '<span class="status-code success">' : '<span class="status-code failure">') + statusCode + "</span>"
+    stElement.innerHTML = "Response Text: " + statusText
+    fileElementWrapper.appendChild(scElement)
+    fileElementWrapper.appendChild(stElement)
 
-    document.getElementById('drag').innerHTML = newFile
+    rfw.appendChild(fileElementWrapper)
 });

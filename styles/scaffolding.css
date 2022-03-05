@@ -171,7 +171,7 @@ input[type="file"] {
     border: 1px solid #ccc;
     display: inline-block;
     padding: 6px 12px;
-    cursor: pointer;
+    cursor: grab;
     min-width: 300px;
     border-radius: 6px 0 0 6px
 }
@@ -182,17 +182,34 @@ input[type="file"] {
     justify-content: center;
 }
 
+#submitButton {
+    cursor: pointer;
+}
+
+.receive-file__wrapper {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    min-width: 371.5px;
+    border-radius: 6px;
+}
+
+.receive-file__wrapper p {
+    font-size: 12px;
+}
+
 .send-file__wrapper {
     margin-top: 30px;
 }
 
 .draggable-file {
-    border: 1px solid #ccc;
     display: inline-block;
-    padding: 6px 12px;
+    padding: 3px 8px;
     cursor: pointer;
-    min-width: 371.5px;
-    border-radius: 6px}
+    border-radius: 3px;
+    background-color: #0054ff;
+    font-size: 12px;
+}
 
 .inline-end__button {
     border: none;
@@ -228,4 +245,12 @@ body {
     top: 15px;
     left: 15px;
     font-size: 10px;
+}
+
+.status-code.failure {
+    color: rgb(255, 66, 66)
+}
+
+.status-code.success {
+    color: rgb(66, 255, 123)
 }
