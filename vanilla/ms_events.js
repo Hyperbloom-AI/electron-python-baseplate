@@ -67,12 +67,21 @@ const sendToPython = async(input) => {
     const config_url = url.toString().replace(/%20/g, ' ').replace('file:///', '').replaceAll('/', '\\')
 
     var result = await window.python.sendCalculation(input, config_url)
+    console.log(result)
+    console.log(JSON.parse(result))
     return result
 }
     
 submitButton.addEventListener('click', async() => {
     var filePath = fileInput.files[0].path
-    const newFile = await sendToPython(filePath);
+    const res = await sendToPython(filePath);
+    
+
+    const newFile = JSON.parse(res).file
+    const statusCode = JSON.parse(res).statusCode
+    const statusText = JSON.parse(res).statusText
+
+    console.log(res)
 
     document.getElementById('drag').ondragstart = (event) => {
         event.preventDefault()

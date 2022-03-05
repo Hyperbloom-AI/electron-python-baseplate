@@ -29,141 +29,183 @@ def translate(path, config):
         for transformation in transformation_list:
             if(error):
                 break
-            match transformation["type"]:
-                case "changeColName":
-                    try:
-                        change_column_name(df, function["columnName"], transformation["new"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "replace":
-                    try:
-                        replace_values(df, function["columnName"], transformation["replacements"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "replaceEmpty":
-                    try:
-                        replace_empty_values(df, function["columnName"], transformation["replacement"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "makeInt":
-                    try:
-                        convert_int(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "removeIfNotInList":
-                    try:
-                        if(transformation["list"] == "US States"):
-                            check_list_remove(df, function["columnName"], states_list)
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "convertToZip":
-                    try:
-                        convert_zip(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "formatPhoneNumber":
-                    try:
-                        format_phone(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "removeValuesInSeparateColumnBasedOnThisColumn":
-                    try:
-                        remove_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replace"], transformation["replaceType"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "replaceValuesInSeparateColumnBasedOnThisColumn":
-                    try:
-                        replace_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replacements"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "replaceWithValueInList":
-                    if(transformation["list"] == "Georgia Counties"):
-                        try:
-                            replace_with_listval_county(df, function["columnName"], ga_counties_list)
-                        except:
-                            error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                            error = True
-                    else:
-                        try:
-                            replace_with_listval(df, function["columnName"], banner_codes)
-                        except:
-                            error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                            error = True
-                case "groupColumns":
-                    df = reorder_columns(df, transformation["columnList"]) # BUG: This function will throw a KeyError exception if the column doesn't exist
-                case "convertToSixDigitFICE":
-                    try:
-                        convert_to_fice(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "splitDateColumn":
-                    try:
-                        split_date_column(df, function["columnName"], transformation['splitColumnNames']) # BUG: Will throw error if length of new column names dont match length of array after split
-                        convert_num_to_month(df, transformation['splitColumnNames'][0])
-                        col_col = transformation['splitColumnNames']
-                        col_col.insert(0, function["columnName"])
-                        df = reorder_columns(df, col_col)
-                        df.drop(columns=function["columnName"], inplace=True)
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "dropColumn":
-                    try:
-                        df.drop(columns=function["columnName"], inplace=True)
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "zFill":
-                    try:
-                        pad_with_zeros(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "removeColumnsUntilIndex":
-                    try:
-                        unshift_to(df, function["columnName"], transformation["index"]) # BUG: Probably lots of bugs that could occur with this but none found yet. Uses antipattern
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "combineWithColumn":
-                    try:
-                        combine_columns(df, function["columnName"], transformation["secondary"])
-                        df.drop(columns=transformation["secondary"], inplace=True)
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "convertToEAID": # ISSUE: This isn't a good built in function since it's only for a specific type of field
-                    try:
-                        getEAID(df, function["columnName"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "checkThenCreateNonexistantColumnListAtIndex":
-                    try:
-                        check_create_clist(df, transformation["columnList"], transformation["index"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case "replaceWhereContains":
-                    try:
-                        replace_conatining(df, function["columnName"], transformation["replacements"])
-                    except:
-                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
-                        error = True
-                case _:
-                    error_text("Hit wildcard, transformation not recognized")
+            if(transformation["type"] == "changeColName"):
+                try:
+                    change_column_name(df, function["columnName"], transformation["new"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
                     error = True
 
+
+            elif(transformation["type"] == "replace"):
+                try:
+                    replace_values(df, function["columnName"], transformation["replacements"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "replaceEmpty"):
+                try:
+                    replace_empty_values(df, function["columnName"], transformation["replacement"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "makeInt"):
+                try:
+                    convert_int(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "removeIfNotInList"):
+                try:
+                    if(transformation["list"] == "US States"):
+                        check_list_remove(df, function["columnName"], states_list)
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "convertToZip"):
+                try:
+                    convert_zip(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "formatPhoneNumber"):
+                try:
+                    format_phone(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "removeValuesInSeparateColumnBasedOnThisColumn"):
+                try:
+                    remove_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replace"], transformation["replaceType"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "replaceValuesInSeparateColumnBasedOnThisColumn"):
+                try:
+                    replace_values_in_other_column_based_on_initial(df, function["columnName"], transformation["separateColumnName"], transformation["replacements"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "replaceWithValueInList"):
+                if(transformation["list"] == "Georgia Counties"):
+                    try:
+                        replace_with_listval_county(df, function["columnName"], ga_counties_list)
+                    except:
+                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                        print(error_text)
+                        error = True
+                else:
+                    try:
+                        replace_with_listval(df, function["columnName"], banner_codes)
+                    except:
+                        error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                        print(error_text)
+                        error = True
+            
+            elif(transformation["type"] == "groupColumns"):
+                df = reorder_columns(df, transformation["columnList"])
+                #error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                #print(error_text)
+                #error = True
+
+            elif(transformation["type"] == "convertToSixDigitFICE"):
+                try:
+                    convert_to_fice(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "splitDateColumn"):
+                try:
+                    split_date_column(df, function["columnName"], transformation['splitColumnNames'])
+                    convert_num_to_month(df, transformation['splitColumnNames'][0])
+                    col_col = transformation['splitColumnNames']
+                    col_col.insert(0, function["columnName"])
+                    df = reorder_columns(df, col_col)
+                    df.drop(columns=function["columnName"], inplace=True)
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "dropColumn"):
+                try:
+                    df.drop(columns=function["columnName"], inplace=True)
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "zFill"):
+                try:
+                    pad_with_zeros(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "removeColumnsUntilIndex"):
+                try:
+                    unshift_to(df, function["columnName"], transformation["index"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "combineWithColumn"):
+                try:
+                    combine_columns(df, function["columnName"], transformation["secondary"])
+                    df.drop(columns=transformation["secondary"], inplace=True)
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+            
+            elif(transformation["type"] == "convertToEAID"):
+                try:
+                    getEAID(df, function["columnName"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "checkThenCreateNonexistantColumnListAtIndex"):
+                try:
+                    check_create_clist(df, transformation["columnList"], transformation["index"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            elif(transformation["type"] == "replaceWhereContains"):
+                try:
+                    replace_conatining(df, function["columnName"], transformation["replacements"])
+                except:
+                    error_text =  "Error in " + transformation["type"] + " at " + function["columnName"]
+                    print(error_text)
+                    error = True
+
+            else:
+                print("Hit default, tranformation not recognized")
+                error = True
     if(error):
         return json.dumps({
             "file": None,

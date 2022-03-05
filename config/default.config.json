@@ -571,6 +571,9 @@
             "columnName": "custom_questions_1990391226441866468_how_long_have_you_continuously_resided_in_georgia_years",
             "transformations": [
                 {
+                    "type": "makeInt"
+                },
+                {
                     "type": "changeColName",
                     "new": "GAREZ_YEARS"
                 }
@@ -579,6 +582,9 @@
         {
             "columnName": "custom_questions_6802816803329693796_months",
             "transformations": [
+                {
+                    "type": "makeInt"
+                },
                 {
                     "type": "changeColName",
                     "new": "GAREZ_MONTHS"
