@@ -57,19 +57,12 @@ const sendToPython = async(input) => {
     /* 
         JSON File loading here is temporary
     */
-
-    //const config = 'C:\\Users\\Charles McNamara\\OneDrive\\Documents\\Work\\electron-poc\\config\\default.config.json'
     let url = ""
     const data = await fetch('./config/default.config.json').then(response => {
         url = response.url;
     });
-
-    console.log(url.toString())
     const config_url = url.toString().replace(/%20/g, ' ').replace('file:///', '').replaceAll('/', '\\')
-
     var result = await window.python.sendCalculation(input, config_url)
-    console.log(result)
-    console.log(JSON.parse(result))
     return result
 }
     
@@ -90,8 +83,6 @@ submitButton.addEventListener('click', async() => {
     const statusText = JSON.parse(res).statusText
 
     if(newFile) {
-        console.log("File Exists")
-
         const fileDraggable = document.createElement('div')
         fileDraggable.classList.add('draggable-file')
         fileDraggable.setAttribute('id', 'drag')
@@ -105,12 +96,9 @@ submitButton.addEventListener('click', async() => {
         }
     
         fileDraggable.innerHTML = newFile
-    } else {
-        console.log("File does not exist due to a python error")
     }
     const stElement = document.createElement('p')
     const scElement = document.createElement('p')
-    const scc = document.createElement('span')
     scElement.innerHTML = "Response Code: " + (statusCode == 200 ? '<span class="status-code success">' : '<span class="status-code failure">') + statusCode + "</span>"
     stElement.innerHTML = "Response Text: " + statusText
     fileElementWrapper.appendChild(scElement)
