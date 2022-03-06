@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=PT+Serif:ital@1&display=swap');
+
 @media (prefers-color-scheme: dark) {
-    body { background: #1d1d1f; color: #f5f5f7; }
+    body { background: #000000; color: #f5f5f7; }
 }
   
 @media (prefers-color-scheme: light) {
     body { background: #fff; color: black; }
 
     .draggable-file, .custom-file-upload {
-        border-color: #000 !important
+        border-color: #4d4d4d !important
+    }
+
+    .receive-file__wrapper {
+        border: 1px solid #4d4d4d !important;
     }
 
     .inline-end__button {
@@ -27,4 +33,10 @@
 
 .more-menu__link.more-menu__link--active {
     background-color: #fff;
+}
+
+
+h1 {
+    font: italic 400 35px/30px 'PT Serif', serif;
+    margin-bottom: 30px;
 }

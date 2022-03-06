@@ -1,6 +1,6 @@
 .theme-settings__wrapper {
     box-sizing: border-box;
-    background-color: #9797974d;
+    background-color: #dc3434;
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -15,6 +15,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    color: white !important
 }
 
 #settingsSvg {
@@ -31,7 +32,6 @@
     position: absolute;
     top: 18px;
     left: 18px;
-    background-color: #9797974d;
     width: 34px;
     height: 34px;
     padding: 10px;
@@ -192,14 +192,11 @@ input[type="file"] {
     padding: 6px 12px;
     min-width: 371.5px;
     border-radius: 6px;
+    min-height: 75px;
 }
 
 .receive-file__wrapper p {
     font-size: 12px;
-}
-
-.send-file__wrapper {
-    margin-top: 30px;
 }
 
 .draggable-file {
@@ -207,8 +204,9 @@ input[type="file"] {
     padding: 3px 8px;
     cursor: pointer;
     border-radius: 3px;
-    background-color: #0054ff;
+    background-color: #dc3434;
     font-size: 12px;
+    color: white
 }
 
 .inline-end__button {
@@ -238,6 +236,7 @@ body {
 
 .trans__wrapper {
     display: flex;
+    justify-content: center;
 }
 
 .version-num {
@@ -253,4 +252,34 @@ body {
 
 .status-code.success {
     color: rgb(66, 255, 123)
+}
+
+.func__wrapper {
+    width: fit-content;
+    margin: auto;
+    padding: 25px;
+    background-color: #b8b8b82a;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.func__wrapper h1 {
+    width: fit-content
+}
+
+.input-label {
+    margin-bottom: 8px;
+    width: 100%;
+    font-size: 12px;
+    color: #9d9d9d;
+    margin-left: 7px;
+    margin-top: 0;
+}
+
+.file_output__wrapper > *:last-child {
+    margin-bottom: 0;
 }

@@ -7,35 +7,40 @@
     <link rel="stylesheet" type="text/css" href="./styles/scaffolding.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>SOPHAS to Graduate Database Translation Application v1.0.9</title>
+    <!--
+                
+        ██╗░░██╗██╗░░░██╗██████╗░███████╗██████╗░██████╗░██╗░░░░░░█████╗░░█████╗░███╗░░░███╗
+        ██║░░██║╚██╗░██╔╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██║░░░░░██╔══██╗██╔══██╗████╗░████║
+        ███████║░╚████╔╝░██████╔╝█████╗░░██████╔╝██████╦╝██║░░░░░██║░░██║██║░░██║██╔████╔██║
+        ██╔══██║░░╚██╔╝░░██╔═══╝░██╔══╝░░██╔══██╗██╔══██╗██║░░░░░██║░░██║██║░░██║██║╚██╔╝██║
+        ██║░░██║░░░██║░░░██║░░░░░███████╗██║░░██║██████╦╝███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║
+        ╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═════╝░╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝
+
+        hyperbloom (fm. DataJoy)
+        Founded 2020, Atlanta GA
+    -->
   </head>
   <body data-theme="device">
-    <br/>
-
-    <h1>SOPHAS to GDB Data Translation</h1>
-    <p>Input SOPHAS Output below</p>
-    <div class="trans__wrapper">
-        <div class="fs__wrapper">
-            <div class="send-file__wrapper">
-                <label class="custom-file-upload">
-                    <input type="file" id="input"/>
-                    <span id="inputText">Click to Select File</span>
-                </label>
-                <button id="submitButton" class="inline-end__button">Submit</button>
-            </div>
-            <div class="chevron__wrapper">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="receive-file__wrapper" id="rfw">
+    <div class="func__wrapper">
+        <h1>SOPHAS to GDB Data Translation</h1>
+        <div class="trans__wrapper">
+            <div class="fs__wrapper">
+                <p class="input-label">Input Export File</p>
+                <div class="send-file__wrapper">
+                    <label class="custom-file-upload">
+                        <input type="file" id="input"/>
+                        <span id="inputText">Click to Select File</span>
+                    </label>
+                    <button id="submitButton" class="inline-end__button">Submit</button>
+                </div>
+                <div class="chevron__wrapper">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <p class="input-label">Translation Output</p>
+                <div class="receive-file__wrapper" id="rfw">
+                </div>
             </div>
         </div>
-    </div>
-    </br>
-    <span id="result"></span>
-
-    <div class="versions">
-        Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
     </div>
 
 
