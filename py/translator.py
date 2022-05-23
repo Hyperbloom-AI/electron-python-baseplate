@@ -109,7 +109,6 @@ def translate(path, config):
                 case "splitDateColumn":
                     try:
                         split_date_column(df, function["columnName"], transformation['splitColumnNames']) # BUG: Will throw error if length of new column names dont match length of array after split
-                        convert_num_to_month(df, transformation['splitColumnNames'][0])
                         col_col = transformation['splitColumnNames']
                         col_col.insert(0, function["columnName"])
                         df = reorder_columns(df, col_col)
